@@ -2,19 +2,31 @@ package org.example;
 
 public class HeroAttributes {
 
+    private int strength ;
+    private int dexterity;
+    private int intelligence;
 
+    public HeroAttributes(int _strength, int _dexterity, int _intelligence){
+        this.strength = _strength;
+        this.dexterity = _dexterity;
+        this.intelligence = _intelligence;
+    }
 
-    private int strength = 0;
+    public void AddAttributes (int strength, int dexterity, int intelligence){
+        this.strength += strength;
+        this.dexterity += dexterity;
+        this.intelligence += intelligence;
+    }
 
-    private int dexterity = 0;
+    public int GetStrength(){
+        return strength;
+    }
 
-    private int intelligence = 0;
+    public int GetDexterity() {
+        return dexterity;
+    }
 
-
-
-    public void setStrength (int strength){}
-
-    public void setDexterity (int dexterity){}
-
-    public void setIntelligence (int intelligence){}
+    public int GetIntelligence() {
+        return intelligence;
+    }
 }

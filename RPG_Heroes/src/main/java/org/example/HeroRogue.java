@@ -1,6 +1,6 @@
 package org.example;
 
-public class HeroRogue extends Hero {
+/*public class HeroRogue extends Hero {
 
     public HeroRogue() {
         super();
@@ -13,4 +13,4 @@ public class HeroRogue extends Hero {
       //  level++?
         // 1, 4 ,1
     }
-}
+}*/
