@@ -2,14 +2,7 @@ package org.example;
 
 public class HeroMage extends Hero {
 
-    private enum ValidWeaponTypes{
-        STAFF,
-        WAND
-    }
 
-    private enum ValidArmorTypes{
-        CLOTH
-    }
 
     public HeroMage(String _name){
         super(_name, new HeroAttributes(1,1,8), "Mage");

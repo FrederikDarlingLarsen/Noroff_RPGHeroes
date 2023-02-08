@@ -22,7 +22,7 @@ public class ItemWeapon extends Item {
 
     }
 
-    public WeaponType getWeaponType(){
+    public WeaponType GetWeaponType(){
         return weaponType;
     }
 
