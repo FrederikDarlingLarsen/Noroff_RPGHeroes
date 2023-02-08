@@ -14,7 +14,8 @@ public class ItemArmor extends Item{
 
     private HeroAttributes armorAttribute;
 
-    public ItemArmor(ArmorType _armorType){
+    public ItemArmor(String _name, int _reqLevel, Slot _slot, ArmorType _armorType){
+        super(_name, _reqLevel, _slot);
         this.armorType = _armorType;
     }
 

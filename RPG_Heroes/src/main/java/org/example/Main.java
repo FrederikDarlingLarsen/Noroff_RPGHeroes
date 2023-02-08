@@ -5,8 +5,12 @@ public class Main {
 
         HeroMage mage = new HeroMage("Darling");
 
-        mage.Display();
+        ItemWeapon axe = new ItemWeapon("Awesome Axe", 1,WeaponType.AXE);
+        
+        //mage.EquipWeapon(axe);
+
         mage.addAttributes(2,1,3);
+
         mage.Display();
     }
 }
