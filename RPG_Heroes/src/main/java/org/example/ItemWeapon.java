@@ -12,9 +12,9 @@ enum WeaponType{
 
 public class ItemWeapon extends Item {
 
-    private WeaponType weaponType;
+    private final WeaponType weaponType;
 
-    private int weaponDamage;
+    private final int weaponDamage;
 
 
     public ItemWeapon(String _name, int _reqLevel, WeaponType _weapontype, int _weaponDamage){

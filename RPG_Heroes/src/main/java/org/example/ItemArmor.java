@@ -10,20 +10,21 @@ enum ArmorType{
 
 public class ItemArmor extends Item{
 
-    private ArmorType armorType;
+    private final ArmorType armorType;
 
-    private HeroAttributes armorAttribute;
+    private final HeroAttributes armorAttributes;
 
-    public ItemArmor(String _name, int _reqLevel, Slot _slot, ArmorType _armorType){
+    public ItemArmor(String _name, int _reqLevel, Slot _slot, ArmorType _armorType, HeroAttributes _armorAttributes){
         super(_name, _reqLevel, _slot);
         this.armorType = _armorType;
+        this.armorAttributes = _armorAttributes;
     }
 
     public ArmorType GetArmorType (){
         return this.armorType;
     }
 
-    public HeroAttributes GetArmorAttributes(){ return this.armorAttribute; }
+    public HeroAttributes GetArmorAttributes(){ return this.armorAttributes; }
 
 
 }

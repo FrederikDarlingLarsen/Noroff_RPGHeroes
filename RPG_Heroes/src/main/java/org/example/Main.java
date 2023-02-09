@@ -15,6 +15,7 @@ public class Main {
         ItemWeapon wand = new ItemWeapon("Magic wand", 1,WeaponType.WAND,5);
         
         hero.EquipWeapon(axe);
+
         hero.EquipWeapon(wand);
 
         hero.AddAttributes(2,1,100);

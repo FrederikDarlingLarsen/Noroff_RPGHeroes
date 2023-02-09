@@ -39,7 +39,6 @@ public abstract class Hero {
         return levelAttributes;
     }
 
-
     public void AddValidWeaponType(WeaponType weaponType){
         this.validWeaponTypes.add(weaponType);
     }
@@ -59,7 +58,8 @@ public abstract class Hero {
                 equipment.put(Slot.WEAPON, weapon);
                 System.out.println("You just equipped: " + weapon.GetName());
             } else {
-                throw new InvalidWeaponException("You are not allowed to equip the following weapon: " + weapon.GetWeaponType().name());
+                throw new InvalidWeaponException("You are not allowed to equip: " + weapon.GetName() +
+                        "   of type: " + weapon.GetWeaponType().name());
             }
         }
         catch(InvalidWeaponException e){
@@ -74,7 +74,8 @@ public abstract class Hero {
                 equipment.put(armor.GetSlot(), armor);
                 System.out.println("You just equipped: " + armor.GetName());
             } else {
-                throw new InvalidArmorException("You can not equip this armor: " + armor.GetArmorType().name());
+                throw new InvalidArmorException("You can not equip this armor: " + armor.GetName()  + "   of type: " +
+                        armor.GetArmorType().name());
             }
         }
         catch(InvalidArmorException e){
