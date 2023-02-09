@@ -1,21 +1,19 @@
 package org.example;
 
 public class HeroAttributes {
-
     private int strength ;
     private int dexterity;
     private int intelligence;
-
     public HeroAttributes(int _strength, int _dexterity, int _intelligence){
         this.strength = _strength;
         this.dexterity = _dexterity;
         this.intelligence = _intelligence;
     }
 
-    public void AddAttributes (int strength, int dexterity, int intelligence){
-        this.strength += strength;
-        this.dexterity += dexterity;
-        this.intelligence += intelligence;
+    public void AddAttributes (HeroAttributes newAttributes){
+        SetStrength(this.strength + newAttributes.GetStrength());
+        SetDexterity(this.dexterity + newAttributes.GetDexterity());
+        SetIntelligence(this.intelligence + newAttributes.GetIntelligence());
     }
 
     public int GetStrength(){
@@ -28,5 +26,17 @@ public class HeroAttributes {
 
     public int GetIntelligence() {
         return intelligence;
+    }
+
+    public void SetStrength(int strength){
+        this.strength = strength;
+    }
+
+    public void SetDexterity(int dexterity) {
+        this.dexterity = dexterity;
+    }
+
+    public void SetIntelligence(int intelligence) {
+        this.intelligence = intelligence;
     }
 }

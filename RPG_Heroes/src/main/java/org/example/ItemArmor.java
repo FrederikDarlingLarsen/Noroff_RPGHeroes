@@ -10,7 +10,7 @@ enum ArmorType{
 
 public class ItemArmor extends Item{
 
-    ArmorType armorType;
+    private ArmorType armorType;
 
     private HeroAttributes armorAttribute;
 

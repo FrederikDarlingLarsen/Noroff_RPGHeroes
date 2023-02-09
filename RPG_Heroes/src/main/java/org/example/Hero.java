@@ -1,7 +1,10 @@
 package org.example;
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public abstract class Hero {
 
@@ -12,8 +15,7 @@ public abstract class Hero {
     private int level = 1;
 
     private HeroAttributes levelAttributes;
-
-    private List<Item> equipment;
+    private Map<Slot, Item> equipment;
 
     private List<WeaponType> validWeaponTypes;
 
@@ -23,6 +25,17 @@ public abstract class Hero {
         this.name = _name;
         this.levelAttributes = _attributes;
         this.heroClass = _heroClass;
+
+        equipment = new HashMap<>();
+        equipment.put(Slot.WEAPON, null);
+        equipment.put(Slot.HEAD, null);
+        equipment.put(Slot.BODY, null);
+        equipment.put(Slot.LEGS, null);
+
+
+        validWeaponTypes = new ArrayList<WeaponType>();
+
+        validArmorTypes = new ArrayList<ArmorType>();
     }
 
     public void LevelUp(){
@@ -30,7 +43,7 @@ public abstract class Hero {
     }
 
     public void addAttributes(int strength, int dexterity, int intelligence){
-        levelAttributes.AddAttributes(strength, dexterity, intelligence);
+        levelAttributes.AddAttributes(new HeroAttributes(strength, dexterity, intelligence));
     }
 
     public HeroAttributes GetAttributes(){
@@ -38,41 +51,56 @@ public abstract class Hero {
     }
 
 
-    public List<WeaponType> GetValidWeaponTypes(){
-        return validWeaponTypes;
 
+
+    public List<WeaponType> GetValidWeaponTypes(){
+        return this.validWeaponTypes;
     }
 
     public List<ArmorType> GetValidArmorTypes(){
         return validArmorTypes;
     }
 
-    public void EquipWeapon(ItemWeapon weapon) throws InvalidWeaponException {
 
-        try {
-            if (GetValidWeaponTypes().contains(weapon.GetWeaponType())) { //do we still need the getters???
-                equipment.add(weapon);
-            } else {
-                throw new InvalidWeaponException("You are not allowed to equip the following weapon: " + weapon.GetWeaponType().name());
-            }
-        }
-        catch(InvalidWeaponException e){
-            System.out.println(e.getMessage());
-        }
+
+    public void AddValidWeaponType(WeaponType weaponType){
+        this.validWeaponTypes.add(weaponType);
     }
 
-    public void EquipArmor(ItemArmor armor) throws InvalidArmorException {
+    public void AddValidArmorType(ArmorType armorType){
+        this.validArmorTypes.add(armorType);
+    }
 
-        try {
-            if (GetValidArmorTypes().contains(armor.GetArmorType())) {
-                equipment.add(armor);
+    public void EquipWeapon(ItemWeapon weapon) /*throws InvalidWeaponException*/ {
+
+       // try {
+            if (GetValidWeaponTypes().contains(weapon.GetWeaponType())) { //do we still need the getters???
+                equipment.put(Slot.WEAPON, weapon);
+                System.out.println("You just equipped: " + weapon.GetName());
             } else {
-                throw new InvalidArmorException("You can not equip this armor: " + armor.GetArmorType().name());
+                System.out.println("Could not equip: " + weapon.GetName());
+                //throw new InvalidWeaponException("You are not allowed to equip the following weapon: " + weapon.GetWeaponType().name());
             }
-        }
+      /*  }
+        catch(InvalidWeaponException e){
+            System.out.println(e.getMessage());
+        }*/
+    }
+
+    public void EquipArmor(ItemArmor armor) /*throws InvalidArmorException*/ {
+
+      //  try {
+            if (GetValidArmorTypes().contains(armor.GetArmorType())) {
+                equipment.put(armor.GetSlot(), armor);
+                System.out.println("You just equipped: " + armor.GetName());
+            } else {
+                System.out.println("Could not equip: " + armor.GetName());
+                //throw new InvalidArmorException("You can not equip this armor: " + armor.GetArmorType().name());
+            }
+      /*  }
         catch(InvalidArmorException e){
             System.out.println(e.getMessage());
-        }
+        }*/
     }
 
     /*public Item GetWeapon(){

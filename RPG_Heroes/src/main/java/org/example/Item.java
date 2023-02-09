@@ -17,4 +17,20 @@ public class Item {
         this.requiredLevel = _reqLevel;
         this.slot = _slot;
     }
+
+    public String GetName(){
+        return this.name;
+    }
+
+    public int GetRequiredLevel(){
+        return this.requiredLevel;
+    }
+
+    public Slot GetSlot(){
+        return this.slot;
+    }
+
+
+
+
 }
