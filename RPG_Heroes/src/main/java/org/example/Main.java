@@ -1,6 +1,6 @@
 package org.example;
 
-import java.awt.color.ICC_ColorSpace;
+
 import java.util.Scanner;
 
 public class Main {
@@ -14,7 +14,7 @@ public class Main {
 
         ItemWeapon wand = new ItemWeapon("Magic wand", 1,WeaponType.WAND,5);
         
-       hero.EquipWeapon(axe);
+        hero.EquipWeapon(axe);
         hero.EquipWeapon(wand);
 
         hero.addAttributes(2,1,100);
@@ -53,10 +53,10 @@ public class Main {
                      hero = new HeroWarrior("BOB");
                      break;
              }
-             ItemWeapon wand = new ItemWeapon("Magic wand", 1,WeaponType.WAND,5);
-             hero.EquipWeapon(wand);
 
              hero.Display();
+
+             System.out.println("Pick your weapon");
 
          }*/
     }

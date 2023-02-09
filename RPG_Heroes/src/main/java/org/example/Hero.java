@@ -1,25 +1,16 @@
 package org.example;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public abstract class Hero {
-
-    private String name;
-
-    private String heroClass;
-
+    private final String name;
+    private final String heroClass;
     private int level = 1;
-
-    private HeroAttributes levelAttributes;
-    private Map<Slot, Item> equipment;
-
-    private List<WeaponType> validWeaponTypes;
-
-    private List<ArmorType> validArmorTypes;
+    private final HeroAttributes levelAttributes;
+    private final HashMap<Slot, Item> equipment;
+    private final ArrayList<WeaponType> validWeaponTypes;
+    private final ArrayList<ArmorType> validArmorTypes;
 
     public Hero (String _name, HeroAttributes _attributes, String _heroClass){
         this.name = _name;
@@ -32,9 +23,7 @@ public abstract class Hero {
         equipment.put(Slot.BODY, null);
         equipment.put(Slot.LEGS, null);
 
-
         validWeaponTypes = new ArrayList<WeaponType>();
-
         validArmorTypes = new ArrayList<ArmorType>();
     }
 
@@ -42,26 +31,13 @@ public abstract class Hero {
         level++;
     }
 
-    public void addAttributes(int strength, int dexterity, int intelligence){
+    public void AddAttributes(int strength, int dexterity, int intelligence){
         levelAttributes.AddAttributes(new HeroAttributes(strength, dexterity, intelligence));
     }
 
     public HeroAttributes GetAttributes(){
         return levelAttributes;
     }
-
-
-
-
-
-    public List<WeaponType> GetValidWeaponTypes(){
-        return this.validWeaponTypes;
-    }
-
-    public List<ArmorType> GetValidArmorTypes(){
-        return validArmorTypes;
-    }
-
 
 
     public void AddValidWeaponType(WeaponType weaponType){
@@ -72,16 +48,14 @@ public abstract class Hero {
         this.validArmorTypes.add(armorType);
     }
 
-
     public ItemWeapon GetWeapon(){
         return (ItemWeapon) equipment.get(Slot.WEAPON);
     }
 
-
     public void EquipWeapon(ItemWeapon weapon) /*throws InvalidWeaponException*/ {
 
        // try {
-            if (GetValidWeaponTypes().contains(weapon.GetWeaponType())) { //do we still need the getters???
+            if (this.validWeaponTypes.contains(weapon.GetWeaponType())) {
                 equipment.put(Slot.WEAPON, weapon);
                 System.out.println("You just equipped: " + weapon.GetName());
             } else {
@@ -97,7 +71,7 @@ public abstract class Hero {
     public void EquipArmor(ItemArmor armor) /*throws InvalidArmorException*/ {
 
       //  try {
-            if (GetValidArmorTypes().contains(armor.GetArmorType())) {
+            if (this.validArmorTypes.contains(armor.GetArmorType())) {
                 equipment.put(armor.GetSlot(), armor);
                 System.out.println("You just equipped: " + armor.GetName());
             } else {
@@ -110,18 +84,7 @@ public abstract class Hero {
         }*/
     }
 
-    /*public Item GetWeapon(){
-
-        if() {
-            return equipment.contains(ItemWeapon);//needs to change
-        }else{
-            return null;
-        }
-
-    }*/
-
     public abstract int Damage();
-
 
     public int TotalAttributes(){
         //LevelAttributes + (Sum of ArmorAttribute for all Armor in Equipment)
@@ -129,8 +92,6 @@ public abstract class Hero {
                 levelAttributes.GetDexterity() +
                 levelAttributes.GetIntelligence();
     }
-
-
     public void Display(){
         // Get Name,Class,Level,the 3 attributes, damage,
         //StringBuilder str = new StringBuilder();
@@ -145,5 +106,4 @@ public abstract class Hero {
         "Damage: " + this.Damage();
         System.out.println(details);
     }
-
 }

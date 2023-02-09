@@ -14,7 +14,7 @@ public class HeroMage extends Hero {
     @Override
     public void LevelUp() {
         super.LevelUp();
-        this.addAttributes(1,1,5);
+        this.AddAttributes(1,1,5);
     }
     @Override
     public int Damage() {

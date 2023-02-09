@@ -6,11 +6,10 @@ enum Slot{
     BODY,
     LEGS
 }
-
-public class Item {
-    private String name;
-    private int requiredLevel;
-    private Slot slot;
+public abstract class Item {
+    private final String name;
+    private final int requiredLevel;
+    private final Slot slot;
 
     public Item(String _name, int _reqLevel, Slot _slot){
         this.name = _name;
@@ -29,8 +28,4 @@ public class Item {
     public Slot GetSlot(){
         return this.slot;
     }
-
-
-
-
 }
