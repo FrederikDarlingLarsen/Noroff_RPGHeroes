@@ -53,6 +53,7 @@ public abstract class Hero {
 
 
 
+
     public List<WeaponType> GetValidWeaponTypes(){
         return this.validWeaponTypes;
     }
@@ -70,6 +71,12 @@ public abstract class Hero {
     public void AddValidArmorType(ArmorType armorType){
         this.validArmorTypes.add(armorType);
     }
+
+
+    public ItemWeapon GetWeapon(){
+        return (ItemWeapon) equipment.get(Slot.WEAPON);
+    }
+
 
     public void EquipWeapon(ItemWeapon weapon) /*throws InvalidWeaponException*/ {
 

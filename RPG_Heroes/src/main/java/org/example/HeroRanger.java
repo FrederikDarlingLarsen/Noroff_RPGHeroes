@@ -16,7 +16,10 @@ public class HeroRanger extends Hero {
     }
     @Override
     public int Damage() {
-        //Remember to add weaponDamage first!!
-        return (1 + GetAttributes().GetDexterity() / 100);
+        if(GetWeapon() != null){
+            return GetWeapon().GetWeaponDamage() * (1 + GetAttributes().GetDexterity() / 100);
+        }else{
+            return (1 + GetAttributes().GetIntelligence() / 100);
+        }
     }
 }

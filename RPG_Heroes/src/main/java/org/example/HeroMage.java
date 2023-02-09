@@ -18,7 +18,11 @@ public class HeroMage extends Hero {
     }
     @Override
     public int Damage() {
-        //Remember to add weaponDamage first!! or multiply??
-       return (1 + GetAttributes().GetIntelligence() / 100);
+        if(GetWeapon() != null){
+       return GetWeapon().GetWeaponDamage() * (1 + GetAttributes().GetIntelligence() / 100);
+    }else{
+            return (1 + GetAttributes().GetIntelligence() / 100);
+        }
     }
+
 }
