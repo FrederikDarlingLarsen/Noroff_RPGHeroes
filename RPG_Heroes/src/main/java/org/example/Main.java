@@ -17,7 +17,7 @@ public class Main {
         hero.EquipWeapon(axe);
         hero.EquipWeapon(wand);
 
-        hero.addAttributes(2,1,100);
+        hero.AddAttributes(2,1,100);
 
         hero.Display();
 

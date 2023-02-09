@@ -4,6 +4,7 @@ public class HeroAttributes {
     private int strength ;
     private int dexterity;
     private int intelligence;
+
     public HeroAttributes(int _strength, int _dexterity, int _intelligence){
         this.strength = _strength;
         this.dexterity = _dexterity;

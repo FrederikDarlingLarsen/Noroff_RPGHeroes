@@ -52,36 +52,34 @@ public abstract class Hero {
         return (ItemWeapon) equipment.get(Slot.WEAPON);
     }
 
-    public void EquipWeapon(ItemWeapon weapon) /*throws InvalidWeaponException*/ {
+    public void EquipWeapon(ItemWeapon weapon)  {
 
-       // try {
+        try {
             if (this.validWeaponTypes.contains(weapon.GetWeaponType())) {
                 equipment.put(Slot.WEAPON, weapon);
                 System.out.println("You just equipped: " + weapon.GetName());
             } else {
-                System.out.println("Could not equip: " + weapon.GetName());
-                //throw new InvalidWeaponException("You are not allowed to equip the following weapon: " + weapon.GetWeaponType().name());
+                throw new InvalidWeaponException("You are not allowed to equip the following weapon: " + weapon.GetWeaponType().name());
             }
-      /*  }
+        }
         catch(InvalidWeaponException e){
-            System.out.println(e.getMessage());
-        }*/
+            System.out.println(e.toString());
+        }
     }
 
-    public void EquipArmor(ItemArmor armor) /*throws InvalidArmorException*/ {
+    public void EquipArmor(ItemArmor armor) {
 
-      //  try {
+        try {
             if (this.validArmorTypes.contains(armor.GetArmorType())) {
                 equipment.put(armor.GetSlot(), armor);
                 System.out.println("You just equipped: " + armor.GetName());
             } else {
-                System.out.println("Could not equip: " + armor.GetName());
-                //throw new InvalidArmorException("You can not equip this armor: " + armor.GetArmorType().name());
+                throw new InvalidArmorException("You can not equip this armor: " + armor.GetArmorType().name());
             }
-      /*  }
+        }
         catch(InvalidArmorException e){
-            System.out.println(e.getMessage());
-        }*/
+            System.out.println(e.toString());
+        }
     }
 
     public abstract int Damage();
