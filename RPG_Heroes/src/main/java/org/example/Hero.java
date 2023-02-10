@@ -30,6 +30,14 @@ public abstract class Hero {
     public void levelUp(){
         level++;
     }
+    public String getName(){
+        return this.name;
+    }
+
+
+    public int getLevel(){
+        return this.level;
+    }
 
     public void addAttributes(int strength, int dexterity, int intelligence){
         levelAttributes.addAttributes(new HeroAttributes(strength, dexterity, intelligence));
