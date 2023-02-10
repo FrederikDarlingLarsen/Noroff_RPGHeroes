@@ -11,33 +11,33 @@ public class HeroAttributes {
         this.intelligence = _intelligence;
     }
 
-    public void AddAttributes (HeroAttributes newAttributes){
-        SetStrength(this.strength + newAttributes.GetStrength());
-        SetDexterity(this.dexterity + newAttributes.GetDexterity());
-        SetIntelligence(this.intelligence + newAttributes.GetIntelligence());
+    public void addAttributes (HeroAttributes newAttributes){
+        setStrength(this.strength + newAttributes.getStrength());
+        setDexterity(this.dexterity + newAttributes.getDexterity());
+        setIntelligence(this.intelligence + newAttributes.getIntelligence());
     }
 
-    public int GetStrength(){
+    public int getStrength(){
         return strength;
     }
 
-    public int GetDexterity() {
+    public int getDexterity() {
         return dexterity;
     }
 
-    public int GetIntelligence() {
+    public int getIntelligence() {
         return intelligence;
     }
 
-    public void SetStrength(int strength){
+    public void setStrength(int strength){
         this.strength = strength;
     }
 
-    public void SetDexterity(int dexterity) {
+    public void setDexterity(int dexterity) {
         this.dexterity = dexterity;
     }
 
-    public void SetIntelligence(int intelligence) {
+    public void setIntelligence(int intelligence) {
         this.intelligence = intelligence;
     }
 }

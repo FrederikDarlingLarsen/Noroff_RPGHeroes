@@ -4,24 +4,24 @@ public class HeroWarrior extends Hero {
     public HeroWarrior(String _name){
         super(_name, new HeroAttributes(5,2,1), "Warrior");
 
-        AddValidWeaponType(WeaponType.AXE);
-        AddValidWeaponType(WeaponType.HAMMER);
-        AddValidWeaponType(WeaponType.SWORD);
+        addValidWeaponType(WeaponType.AXE);
+        addValidWeaponType(WeaponType.HAMMER);
+        addValidWeaponType(WeaponType.SWORD);
 
-        AddValidArmorType(ArmorType.MAIL);
-        AddValidArmorType(ArmorType.PLATE);
+        addValidArmorType(ArmorType.MAIL);
+        addValidArmorType(ArmorType.PLATE);
     }
     @Override
-    public void LevelUp() {
-        super.LevelUp();
-        this.AddAttributes(3,2,1);
+    public void levelUp() {
+        super.levelUp();
+        this.addAttributes(3,2,1);
     }
     @Override
-    public int Damage() {
-        if(GetWeapon() != null){
-            return GetWeapon().GetWeaponDamage() * (1 + GetAttributes().GetStrength() / 100);
+    public int damage() {
+        if(getWeapon() != null){
+            return getWeapon().getWeaponDamage() * (1 + getAttributes().getStrength() / 100);
         }else{
-            return (1 + GetAttributes().GetIntelligence() / 100);
+            return (1 + getAttributes().getIntelligence() / 100);
         }
     }
 }

@@ -11,11 +11,8 @@ enum WeaponType{
 }
 
 public class ItemWeapon extends Item {
-
     private final WeaponType weaponType;
-
     private final int weaponDamage;
-
 
     public ItemWeapon(String _name, int _reqLevel, WeaponType _weapontype, int _weaponDamage){
         super(_name, _reqLevel, Slot.WEAPON);
@@ -24,11 +21,11 @@ public class ItemWeapon extends Item {
 
     }
 
-    public WeaponType GetWeaponType(){
+    public WeaponType getWeaponType(){
         return weaponType;
     }
 
-    public int GetWeaponDamage (){
+    public int getWeaponDamage (){
         return weaponDamage;
     }
 }

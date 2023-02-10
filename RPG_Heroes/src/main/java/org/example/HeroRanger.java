@@ -4,22 +4,22 @@ public class HeroRanger extends Hero {
     public HeroRanger(String _name){
         super(_name, new HeroAttributes(1,7,1), "Ranger");
 
-        AddValidWeaponType(WeaponType.BOW);
+        addValidWeaponType(WeaponType.BOW);
 
-        AddValidArmorType(ArmorType.LEATHER);
-        AddValidArmorType(ArmorType.MAIL);
+        addValidArmorType(ArmorType.LEATHER);
+        addValidArmorType(ArmorType.MAIL);
     }
     @Override
-    public void LevelUp() {
-        super.LevelUp();
-        this.AddAttributes(1,5,1);
+    public void levelUp() {
+        super.levelUp();
+        this.addAttributes(1,5,1);
     }
     @Override
-    public int Damage() {
-        if(GetWeapon() != null){
-            return GetWeapon().GetWeaponDamage() * (1 + GetAttributes().GetDexterity() / 100);
+    public int damage() {
+        if(getWeapon() != null){
+            return getWeapon().getWeaponDamage() * (1 + getAttributes().getDexterity() / 100);
         }else{
-            return (1 + GetAttributes().GetIntelligence() / 100);
+            return (1 + getAttributes().getIntelligence() / 100);
         }
     }
 }

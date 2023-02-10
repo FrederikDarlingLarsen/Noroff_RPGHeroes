@@ -27,39 +27,39 @@ public abstract class Hero {
         validArmorTypes = new ArrayList<ArmorType>();
     }
 
-    public void LevelUp(){
+    public void levelUp(){
         level++;
     }
 
-    public void AddAttributes(int strength, int dexterity, int intelligence){
-        levelAttributes.AddAttributes(new HeroAttributes(strength, dexterity, intelligence));
+    public void addAttributes(int strength, int dexterity, int intelligence){
+        levelAttributes.addAttributes(new HeroAttributes(strength, dexterity, intelligence));
     }
 
-    public HeroAttributes GetAttributes(){
+    public HeroAttributes getAttributes(){
         return levelAttributes;
     }
 
-    public void AddValidWeaponType(WeaponType weaponType){
+    public void addValidWeaponType(WeaponType weaponType){
         this.validWeaponTypes.add(weaponType);
     }
 
-    public void AddValidArmorType(ArmorType armorType){
+    public void addValidArmorType(ArmorType armorType){
         this.validArmorTypes.add(armorType);
     }
 
-    public ItemWeapon GetWeapon(){
+    public ItemWeapon getWeapon(){
         return (ItemWeapon) equipment.get(Slot.WEAPON);
     }
 
-    public void EquipWeapon(ItemWeapon weapon)  {
+    public void equipWeapon(ItemWeapon weapon)  {
 
         try {
-            if (this.validWeaponTypes.contains(weapon.GetWeaponType())) {
+            if (this.validWeaponTypes.contains(weapon.getWeaponType())) {
                 equipment.put(Slot.WEAPON, weapon);
-                System.out.println("You just equipped: " + weapon.GetName());
+                System.out.println("You just equipped: " + weapon.getName());
             } else {
-                throw new InvalidWeaponException("You are not allowed to equip: " + weapon.GetName() +
-                        "   of type: " + weapon.GetWeaponType().name());
+                throw new InvalidWeaponException("You are not allowed to equip: " + weapon.getName() +
+                        "   of type: " + weapon.getWeaponType().name());
             }
         }
         catch(InvalidWeaponException e){
@@ -67,15 +67,15 @@ public abstract class Hero {
         }
     }
 
-    public void EquipArmor(ItemArmor armor) {
+    public void equipArmor(ItemArmor armor) {
 
         try {
-            if (this.validArmorTypes.contains(armor.GetArmorType())) {
-                equipment.put(armor.GetSlot(), armor);
-                System.out.println("You just equipped: " + armor.GetName());
+            if (this.validArmorTypes.contains(armor.getArmorType())) {
+                equipment.put(armor.getSlot(), armor);
+                System.out.println("You just equipped: " + armor.getName());
             } else {
-                throw new InvalidArmorException("You can not equip this armor: " + armor.GetName()  + "   of type: " +
-                        armor.GetArmorType().name());
+                throw new InvalidArmorException("You can not equip this armor: " + armor.getName()  + "   of type: " +
+                        armor.getArmorType().name());
             }
         }
         catch(InvalidArmorException e){
@@ -83,15 +83,15 @@ public abstract class Hero {
         }
     }
 
-    public abstract int Damage();
+    public abstract int damage();
 
-    public int TotalAttributes(){
+    public int totalAttributes(){
         //LevelAttributes + (Sum of ArmorAttribute for all Armor in Equipment)
-        return levelAttributes.GetStrength() +
-                levelAttributes.GetDexterity() +
-                levelAttributes.GetIntelligence();
+        return levelAttributes.getStrength() +
+                levelAttributes.getDexterity() +
+                levelAttributes.getIntelligence();
     }
-    public void Display(){
+    public void display(){
         // Get Name,Class,Level,the 3 attributes, damage,
         //StringBuilder str = new StringBuilder();
         //str.append("GFG");
@@ -99,10 +99,10 @@ public abstract class Hero {
         "Name: " + this.name + "\n" +
         "Class: " + this.heroClass + "\n" +
         "Level: " + this.level + "\n" +
-        "Strength: " + this.levelAttributes.GetStrength() + "\n" +
-        "Dexterity: " + this.levelAttributes.GetDexterity() + "\n" +
-        "Intelligence: " + this.levelAttributes.GetIntelligence() + "\n" +
-        "Damage: " + this.Damage();
+        "Strength: " + this.levelAttributes.getStrength() + "\n" +
+        "Dexterity: " + this.levelAttributes.getDexterity() + "\n" +
+        "Intelligence: " + this.levelAttributes.getIntelligence() + "\n" +
+        "Damage: " + this.damage();
         System.out.println(details);
     }
 }

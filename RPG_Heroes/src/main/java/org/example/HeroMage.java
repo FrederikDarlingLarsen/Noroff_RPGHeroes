@@ -6,22 +6,22 @@ public class HeroMage extends Hero {
     public HeroMage(String _name){
         super(_name, new HeroAttributes(1,1,8), "Mage");
 
-        AddValidWeaponType(WeaponType.STAFF);
-        AddValidWeaponType(WeaponType.WAND);
+        addValidWeaponType(WeaponType.STAFF);
+        addValidWeaponType(WeaponType.WAND);
 
-        AddValidArmorType(ArmorType.CLOTH);
+        addValidArmorType(ArmorType.CLOTH);
     }
     @Override
-    public void LevelUp() {
-        super.LevelUp();
-        this.AddAttributes(1,1,5);
+    public void levelUp() {
+        super.levelUp();
+        this.addAttributes(1,1,5);
     }
     @Override
-    public int Damage() {
-        if(GetWeapon() != null){
-       return GetWeapon().GetWeaponDamage() * (1 + GetAttributes().GetIntelligence() / 100);
+    public int damage() {
+        if(getWeapon() != null){
+       return getWeapon().getWeaponDamage() * (1 + getAttributes().getIntelligence() / 100);
     }else{
-            return (1 + GetAttributes().GetIntelligence() / 100);
+            return (1 + getAttributes().getIntelligence() / 100);
         }
     }
 

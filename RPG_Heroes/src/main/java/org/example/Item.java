@@ -17,15 +17,15 @@ public abstract class Item {
         this.slot = _slot;
     }
 
-    public String GetName(){
+    public String getName(){
         return this.name;
     }
 
-    public int GetRequiredLevel(){
+    public int getRequiredLevel(){
         return this.requiredLevel;
     }
 
-    public Slot GetSlot(){
+    public Slot getSlot(){
         return this.slot;
     }
 }

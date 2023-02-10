@@ -4,23 +4,23 @@ public class HeroRogue extends Hero {
     public HeroRogue(String _name){
         super(_name, new HeroAttributes(2,6,1), "Rogue");
 
-        AddValidWeaponType(WeaponType.DAGGER);
-        AddValidWeaponType(WeaponType.SWORD);
+        addValidWeaponType(WeaponType.DAGGER);
+        addValidWeaponType(WeaponType.SWORD);
 
-        AddValidArmorType(ArmorType.LEATHER);
-        AddValidArmorType(ArmorType.MAIL);
+        addValidArmorType(ArmorType.LEATHER);
+        addValidArmorType(ArmorType.MAIL);
     }
     @Override
-    public void LevelUp() {
-        super.LevelUp();
-        this.AddAttributes(1,4,1);
+    public void levelUp() {
+        super.levelUp();
+        this.addAttributes(1,4,1);
     }
     @Override
-    public int Damage() {
-        if(GetWeapon() != null){
-            return GetWeapon().GetWeaponDamage() * (1 + GetAttributes().GetDexterity() / 100);
+    public int damage() {
+        if(getWeapon() != null){
+            return getWeapon().getWeaponDamage() * (1 + getAttributes().getDexterity() / 100);
         }else{
-            return (1 + GetAttributes().GetIntelligence() / 100);
+            return (1 + getAttributes().getIntelligence() / 100);
         }
     }
 }

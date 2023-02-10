@@ -14,17 +14,17 @@ public class Main {
 
         ItemWeapon wand = new ItemWeapon("Magic wand", 1,WeaponType.WAND,5);
         
-        hero.EquipWeapon(axe);
+        hero.equipWeapon(axe);
 
-        hero.EquipWeapon(wand);
+        hero.equipWeapon(wand);
 
-        hero.AddAttributes(2,1,100);
+        hero.addAttributes(2,1,100);
 
-        hero.Display();
+        hero.display();
 
-        System.out.println("Currently equipped weapon: " + hero.GetWeapon().GetName());
+        System.out.println("Currently equipped weapon: " + hero.getWeapon().getName());
 
-        /* while(true){
+      /*   while(true){
 
              Scanner input = new Scanner(System.in);
 
@@ -36,18 +36,27 @@ public class Main {
                  case 0:
                      System.out.println("Please enter a name");
                      hero = new HeroMage(input.next());
+                     System.out.println("Pick your weapon");
+                     System.out.println("Press 1 for wand");
+                     System.out.println("Press 2 for staff");
+
+
+
                      break;
                  case 1:
                      System.out.println("Please enter a name");
                      hero = new HeroRanger(input.next());
+                     System.out.println("Pick your weapon");
                      break;
                  case 2:
                      System.out.println("Please enter a name");
                      hero = new HeroRogue(input.next());
+                     System.out.println("Pick your weapon");
                      break;
                  case 3:
                      System.out.println("Please enter a name");
                      hero = new HeroWarrior(input.next());
+                     System.out.println("Pick your weapon");
                      break;
                  default:
                     // System.out.println("Please enter a name");
@@ -55,9 +64,9 @@ public class Main {
                      break;
              }
 
-             hero.Display();
+             hero.display();
 
-             System.out.println("Pick your weapon");
+
 
          }*/
     }

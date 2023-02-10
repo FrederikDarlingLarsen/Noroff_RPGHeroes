@@ -20,11 +20,11 @@ public class ItemArmor extends Item{
         this.armorAttributes = _armorAttributes;
     }
 
-    public ArmorType GetArmorType (){
+    public ArmorType getArmorType (){
         return this.armorType;
     }
 
-    public HeroAttributes GetArmorAttributes(){ return this.armorAttributes; }
+    public HeroAttributes getArmorAttributes(){ return this.armorAttributes; }
 
 
 }
