@@ -8,7 +8,7 @@ public class Main {
 
         //Testing functionality
 
-        Hero hero = new HeroWarrior("Darling");
+     /*   Hero hero = new HeroWarrior("Darling");
 
         ItemWeapon axe = new ItemWeapon("Awesome Axe", 1,WeaponType.AXE,10);
 
@@ -22,7 +22,10 @@ public class Main {
 
         hero.display();
 
-        System.out.println("Currently equipped weapon: " + hero.getWeapon().getName());
+        System.out.println("Currently equipped weapon: " + hero.getWeapon().getName());*/
+
+
+        System.out.println(readableTime(86399));
 
       /*   while(true){
 
@@ -69,5 +72,13 @@ public class Main {
 
 
          }*/
+    }
+
+
+    public static String readableTime(float time){
+        float hours = time/3600;
+        float minutes = (hours % 1) * 60;
+        float seconds = (minutes % 1) * 60;
+        return (int)hours + ":" + (int)minutes + ":" + (int)seconds;
     }
 }

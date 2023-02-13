@@ -59,14 +59,25 @@ public abstract class Hero {
         return (ItemWeapon) equipment.get(Slot.WEAPON);
     }
 
+    public ItemArmor getArmor(Slot slot){
+        return (ItemArmor) equipment.get(slot);
+    }
+
     public void equipWeapon(ItemWeapon weapon)  {
 
         try {
             if (this.validWeaponTypes.contains(weapon.getWeaponType())) {
-                equipment.put(Slot.WEAPON, weapon);
-                System.out.println("You just equipped: " + weapon.getName());
+
+
+                if(weapon.getRequiredLevel() <= this.level){
+                    equipment.put(Slot.WEAPON, weapon);
+                    System.out.println("You just equipped: " + weapon.getName());
+                } else {
+                    throw new InvalidWeaponException("You are not at a high enough level to equip this weapon: " + weapon.getName() +
+                            "   of type: " + weapon.getWeaponType().name());
+                }
             } else {
-                throw new InvalidWeaponException("You are not allowed to equip: " + weapon.getName() +
+                throw new InvalidWeaponException("The following weapon can not be equipped by your class: " + weapon.getName() +
                         "   of type: " + weapon.getWeaponType().name());
             }
         }
@@ -79,8 +90,14 @@ public abstract class Hero {
 
         try {
             if (this.validArmorTypes.contains(armor.getArmorType())) {
-                equipment.put(armor.getSlot(), armor);
-                System.out.println("You just equipped: " + armor.getName());
+
+                if(armor.getRequiredLevel() <= this.level) {
+                    equipment.put(armor.getSlot(), armor);
+                    System.out.println("You just equipped: " + armor.getName());
+                }else{
+                    throw new InvalidArmorException("You can not equip this armor: " + armor.getName()  + "   of type: " +
+                            armor.getArmorType().name());
+                }
             } else {
                 throw new InvalidArmorException("You can not equip this armor: " + armor.getName()  + "   of type: " +
                         armor.getArmorType().name());

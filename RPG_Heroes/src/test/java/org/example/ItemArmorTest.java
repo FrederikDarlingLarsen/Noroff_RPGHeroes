@@ -15,27 +15,27 @@ class ItemArmorTest {
     }
 
     @Test
-    public void hasCorrectName(){
+    public void checkName_nameIsSameAsGiven_shouldPass(){
         assertEquals(cloth.getName(), "just cloth");
     }
 
     @Test
-    public void hasCorrectLevelReq(){
+    public void checkLevelReq_levelIsSameAsGiven_shouldPass(){
         assertEquals(cloth.getRequiredLevel(),1);
     }
 
     @Test
-    public void hasCorrectSlot(){
+    public void checkSlot_slotIsSameAsAssigned_shouldPass(){
         assertEquals(cloth.getSlot(), Slot.BODY);
     }
 
     @Test
-    public void hasCorrectType(){
+    public void checkType_typeIsSameAsGiven_shouldPass(){
         assertEquals(cloth.getArmorType(), ArmorType.CLOTH);
     }
 
     @Test
-    public void hasCorrectAttributes(){
+    public void checkAttributes_attributesAreSameAsGiven_shouldPass(){
         assertEquals(cloth.getArmorAttributes().getStrength(),1);
         assertEquals(cloth.getArmorAttributes().getDexterity(),1);
         assertEquals(cloth.getArmorAttributes().getIntelligence(),1);
