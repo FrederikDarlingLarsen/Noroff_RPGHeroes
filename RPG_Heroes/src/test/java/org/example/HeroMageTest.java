@@ -13,11 +13,6 @@ class HeroMageTest {
         mage = new HeroMage("Darling");
     }
 
-   /* @Test
-    public void shouldCreateMage(){
-        Assertions.assertNotNull(mage);
-    }*/
-
     @Test
     public void checkName_nameIsSameAsGiven_shouldPass(){
         Assertions.assertEquals(mage.getName(),"Darling");
@@ -30,27 +25,19 @@ class HeroMageTest {
 
     @Test
    public void checkAttributes_attributesAreSameAsGiven_shouldPass(){
-       Assertions.assertEquals(mage.getAttributes().getStrength(),1);
-       Assertions.assertEquals(mage.getAttributes().getDexterity(),1);
-       Assertions.assertEquals(mage.getAttributes().getIntelligence(),8);
+       Assertions.assertEquals(new HeroAttributes(1,1,8), mage.getAttributes());
    }
 
    @Test
     public void increaseLevel_attributesAreCorrectlyIncreased_shouldPass(){
         mage.levelUp();
-        Assertions.assertEquals(mage.getLevel(), 2);
-       Assertions.assertEquals(mage.getAttributes().getStrength(),2);
-       Assertions.assertEquals(mage.getAttributes().getDexterity(),2);
-       Assertions.assertEquals(mage.getAttributes().getIntelligence(),13);
+       assertEquals(new HeroAttributes(2,2,13),mage.getAttributes());
    }
 
     @Test
-    public void increaseAttributes_attributesAreCorrectlyIncreased_shouldPass(){
+    public void increaseAttributes_attributesAreCorrectlyIncreased_shouldPass(){  //is this correct or should it be add fron HeroAttribures?????
         mage.addAttributes(1,1,1);
-        Assertions.assertEquals(mage.getAttributes().getStrength(),2);
-        Assertions.assertEquals(mage.getAttributes().getDexterity(),2);
-        Assertions.assertEquals(mage.getAttributes().getIntelligence(),9);
-
+        assertEquals(new HeroAttributes(2,2,9), mage.getAttributes());
     }
 
     @Test
@@ -83,35 +70,95 @@ class HeroMageTest {
     }
 
     @Test
-    public void doNotEquipArmor_NoArmorIsEquippedDueToWrongType_shouldPass(){
+    public void doNotEquipArmor_noArmorIsEquippedDueToWrongType_shouldPass(){
         ItemArmor leather = new ItemArmor("leather-suit", 1, Slot.BODY, ArmorType.LEATHER, new HeroAttributes(1,1,3));
         mage.equipArmor(leather);
         assertNull(mage.getArmor(Slot.BODY));
     }
 
     @Test
-    public void doNotEquipArmor_NoArmorIsEquippedDueToWrongLevel_shouldPass(){
+    public void doNotEquipArmor_noArmorIsEquippedDueToWrongLevel_shouldPass(){
         ItemArmor cloth = new ItemArmor("just cloth", 10, Slot.BODY, ArmorType.CLOTH, new HeroAttributes(1,1,3));
         mage.equipArmor(cloth);
         assertNull(mage.getArmor(Slot.BODY));
     }
 
+   @Test
+   public void totalAttributes_noEquipment_shouldPass(){
+       assertEquals(new HeroAttributes(1,1,8), mage.getAttributes());
+   }
+
+    @Test
+    public void totalAttributes_oneArmorPiece_shouldPass(){
+       ItemArmor cloth = new ItemArmor("just cloth",1,Slot.BODY,ArmorType.CLOTH,new HeroAttributes(1,1,1));
+       mage.equipArmor(cloth);
+       assertEquals(new HeroAttributes(2,2,9), mage.getAttributes());
+    }
+
+    @Test
+    public void totalAttributes_replacedArmorPiece_shouldPass(){
+        ItemArmor cloth = new ItemArmor("just cloth",1,Slot.BODY,ArmorType.CLOTH,new HeroAttributes(1,1,1));
+        ItemArmor anotherCloth = new ItemArmor("just another cloth",1,Slot.BODY,ArmorType.CLOTH,new HeroAttributes(1,3,1));
+        mage.equipArmor(cloth);
+        mage.equipArmor(anotherCloth);
+        assertEquals(new HeroAttributes(2,4,9), mage.getAttributes());
+    }
+
+    @Test
+    public void heroDamage_noWeapon_shouldPass(){
+        int expected = (1 + mage.getAttributes().getIntelligence() / 100);
+        assertEquals(expected, mage.damage());
+    }
+
+    @Test
+    public void heroDamage_withWeapon_shouldPass(){
+        ItemWeapon wand = new ItemWeapon("just a basic wand",1,WeaponType.WAND,3);
+        mage.equipWeapon(wand);
+
+        int expected = 3 * (1 + mage.getAttributes().getIntelligence() / 100);
+
+        assertEquals(expected,mage.damage());
+    }
+
+    @Test
+    public void heroDamage_replacedWeapon_shouldPass(){
+        ItemWeapon wand = new ItemWeapon("just a basic wand",1,WeaponType.WAND,3);
+        mage.equipWeapon(wand);
+        ItemWeapon staff = new ItemWeapon("a staff",1,WeaponType.STAFF,5);
+        mage.equipWeapon(staff);
+        int expected = 5 * (1 + mage.getAttributes().getIntelligence() / 100);
+        assertEquals(expected, mage.damage());
+    }
+
+    @Test
+    public void heroDamage_withWeaponAndArmor_shouldPass(){
+        ItemWeapon wand = new ItemWeapon("just a basic wand",1,WeaponType.WAND,3);
+        mage.equipWeapon(wand);
+        ItemArmor cloth = new ItemArmor("just cloth",1,Slot.BODY,ArmorType.CLOTH,new HeroAttributes(1,1,1));
+        mage.equipArmor(cloth);
+
+        int expected = 3 * (1 + mage.getAttributes().getIntelligence() / 100);
+
+        assertEquals(expected, mage.damage());
+    }
+
+    @Test
+    public void displayState_correctlyDisplay_shouldPass(){
+
+        StringBuilder expected = new StringBuilder("Details of Hero:" + "\n");
+        String name = "Name: Darling" + "\n";
+        expected.append(name);
+        String className = "Class: Mage" + "\n";
+        expected.append(className);
+        String level = "Level: 1" + "\n";
+        expected.append(level);
+        String attributes = "Strength: 1, Dexterity: 1, Intelligence: 8" + "\n";
+        expected.append(attributes);
+        String damage = "Damage: " + mage.damage();
+        expected.append(damage);
+
+        assertEquals(expected.toString(), mage.display().toString());
 
 
-    /*Total attributes should be calculated correctly
-    o With no equipment
-    o With one piece of armor
-    o With two pieces of armor
-    o With a replaced piece of armor (equip armor, then equip new armor in the same slot)*/
-
-
-    /* Hero damage should be calculated properly
-o No weapon equipped
-o Weapon equipped
-o Replaced weapon equipped (equip a weapon then equip a new weapon)
-o Weapon and armor equipped
-*/
-
-
-    //  Heroes should display their state correctly
+    }
 }

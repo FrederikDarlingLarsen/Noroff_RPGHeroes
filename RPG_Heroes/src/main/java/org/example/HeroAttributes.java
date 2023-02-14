@@ -40,4 +40,12 @@ public class HeroAttributes {
     public void setIntelligence(int intelligence) {
         this.intelligence = intelligence;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        HeroAttributes that = (HeroAttributes) o;
+        return strength == that.strength && dexterity == that.dexterity && intelligence == that.intelligence;
+    }
 }

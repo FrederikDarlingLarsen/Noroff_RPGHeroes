@@ -16,7 +16,7 @@ public class HeroWarrior extends Hero {
         super.levelUp();
         this.addAttributes(3,2,1);
     }
-    @Override
+
     public int damage() {
         if(getWeapon() != null){
             return getWeapon().getWeaponDamage() * (1 + getAttributes().getStrength() / 100);

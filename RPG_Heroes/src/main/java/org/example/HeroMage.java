@@ -16,7 +16,7 @@ public class HeroMage extends Hero {
         super.levelUp();
         this.addAttributes(1,1,5);
     }
-    @Override
+
     public int damage() {
         if(getWeapon() != null){
        return getWeapon().getWeaponDamage() * (1 + getAttributes().getIntelligence() / 100);

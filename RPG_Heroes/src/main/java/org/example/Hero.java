@@ -34,7 +34,6 @@ public abstract class Hero {
         return this.name;
     }
 
-
     public int getLevel(){
         return this.level;
     }
@@ -43,8 +42,26 @@ public abstract class Hero {
         levelAttributes.addAttributes(new HeroAttributes(strength, dexterity, intelligence));
     }
 
+    public HeroAttributes getLevelAttributes(){
+        return this.levelAttributes;
+    }
+
+    //total attributes
     public HeroAttributes getAttributes(){
-        return levelAttributes;
+            HeroAttributes attribute = new HeroAttributes(levelAttributes.getStrength(),
+                    levelAttributes.getDexterity(),levelAttributes.getIntelligence());
+
+      for (Slot slot : Slot.values()) {
+
+          if(!slot.equals(Slot.WEAPON)){
+            if(getArmor(slot) != null) {
+                attribute.addAttributes(new HeroAttributes(
+                        getArmor(slot).getArmorAttributes().getStrength(),
+                        getArmor(slot).getArmorAttributes().getDexterity(),
+                        getArmor(slot).getArmorAttributes().getIntelligence()));
+            }
+        }}
+        return attribute;
     }
 
     public void addValidWeaponType(WeaponType weaponType){
@@ -110,17 +127,14 @@ public abstract class Hero {
 
     public abstract int damage();
 
-    public int totalAttributes(){
-        //LevelAttributes + (Sum of ArmorAttribute for all Armor in Equipment)
-        return levelAttributes.getStrength() +
-                levelAttributes.getDexterity() +
-                levelAttributes.getIntelligence();
-    }
-    public void display(){
+
+    public StringBuilder display(){
         // Get Name,Class,Level,the 3 attributes, damage,
         //StringBuilder str = new StringBuilder();
         //str.append("GFG");
-        String details =
+
+
+        /*String details =
         "Name: " + this.name + "\n" +
         "Class: " + this.heroClass + "\n" +
         "Level: " + this.level + "\n" +
@@ -128,6 +142,28 @@ public abstract class Hero {
         "Dexterity: " + this.levelAttributes.getDexterity() + "\n" +
         "Intelligence: " + this.levelAttributes.getIntelligence() + "\n" +
         "Damage: " + this.damage();
-        System.out.println(details);
+        System.out.println(details);*/
+
+
+        StringBuilder details = new StringBuilder("Details of Hero:" + "\n");
+
+        String name = "Name: " + this.name + "\n";
+        details.append(name);
+
+        String className = "Class: " + this.heroClass + "\n";
+        details.append(className);
+
+        String level = "Level: " + this.level + "\n";
+        details.append(level);
+
+        String attributes = "Strength: " + this.levelAttributes.getStrength() + ", " +
+                "Dexterity: " + this.levelAttributes.getDexterity() + ", " +
+                "Intelligence: " + this.levelAttributes.getIntelligence() + "\n";
+        details.append(attributes);
+
+        String damage = "Damage: " + this.damage();
+        details.append(damage);
+
+        return details;
     }
 }

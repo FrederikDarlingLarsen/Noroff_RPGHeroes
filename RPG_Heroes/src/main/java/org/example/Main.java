@@ -8,7 +8,7 @@ public class Main {
 
         //Testing functionality
 
-     /*   Hero hero = new HeroWarrior("Darling");
+     /* Hero hero = new HeroWarrior("Darling");
 
         ItemWeapon axe = new ItemWeapon("Awesome Axe", 1,WeaponType.AXE,10);
 
@@ -24,8 +24,6 @@ public class Main {
 
         System.out.println("Currently equipped weapon: " + hero.getWeapon().getName());*/
 
-
-        System.out.println(readableTime(86399));
 
       /*   while(true){
 
@@ -82,3 +80,7 @@ public class Main {
         return (int)hours + ":" + (int)minutes + ":" + (int)seconds;
     }
 }
+
+
+
+

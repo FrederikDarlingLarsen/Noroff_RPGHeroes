@@ -14,7 +14,7 @@ public class HeroRanger extends Hero {
         super.levelUp();
         this.addAttributes(1,5,1);
     }
-    @Override
+
     public int damage() {
         if(getWeapon() != null){
             return getWeapon().getWeaponDamage() * (1 + getAttributes().getDexterity() / 100);
