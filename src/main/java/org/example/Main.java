@@ -6,6 +6,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+
+        String res = convertToPascalCase("The Quick .,- brown foX jUmped '[]/Over the lAZy dog");
+
+        System.out.println(res);
+
         //Testing functionality
 
      /* Hero hero = new HeroWarrior("Darling");
@@ -40,9 +45,6 @@ public class Main {
                      System.out.println("Pick your weapon");
                      System.out.println("Press 1 for wand");
                      System.out.println("Press 2 for staff");
-
-
-
                      break;
                  case 1:
                      System.out.println("Please enter a name");
@@ -64,20 +66,27 @@ public class Main {
                      hero = new HeroWarrior("BOB");
                      break;
              }
-
              hero.display();
-
-
-
          }*/
     }
-
 
     public static String readableTime(float time){
         float hours = time/3600;
         float minutes = (hours % 1) * 60;
         float seconds = (minutes % 1) * 60;
         return (int)hours + ":" + (int)minutes + ":" + (int)seconds;
+    }
+
+
+    public static String convertToPascalCase(String input){
+        StringBuilder result = new StringBuilder();
+        String[] words = input.toLowerCase().replaceAll("[^a-z0-9 ]","").split(" ");
+        for (String word : words) {
+            if(word.length() != 0) {
+                result.append(word.substring(0, 1).toUpperCase()).append(word.substring(1));
+            }
+        }
+        return result.toString();
     }
 }
 
