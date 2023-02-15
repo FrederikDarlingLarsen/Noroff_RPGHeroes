@@ -5,9 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e090d19-c701-4446-9328-edccbbcdff5b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ArmorType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ArmorType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Hero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HeroAttributes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HeroAttributes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HeroMage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HeroMage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HeroRanger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HeroRanger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HeroRogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HeroRogue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HeroWarrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HeroWarrior.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/InvalidArmorException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/InvalidArmorException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/InvalidWeaponException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/InvalidWeaponException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ItemArmor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ItemArmor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ItemWeapon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ItemWeapon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Slot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Slot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WeaponType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeaponType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/HeroMageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroMageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/HeroRangerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroRangerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/HeroRogueTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroRogueTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/HeroWarriorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroWarriorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ItemArmorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ItemArmorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ItemWeaponTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ItemWeaponTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MainTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
