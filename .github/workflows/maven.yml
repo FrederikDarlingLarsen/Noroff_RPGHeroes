@@ -30,6 +30,17 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - uses: actions/checkout@v2     # checkout the repo
+#     - run: mvn ci                   # install packages
+#     - run: mvn test                 # run tests (configured to use jest-junit reporter)
+
+    - name: Test Report
+      uses: dorny/test-reporter@v1
+      if: success() || failure()    # run this step even if previous step failed
+      with:
+        name: JAVA Tests            # Name of the check run which will be created
+        path: reports/java-*.xml    # Path to test results
+        reporter: java-junit        # Format of test results
 
 
 
