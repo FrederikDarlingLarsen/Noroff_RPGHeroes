@@ -40,11 +40,7 @@ public abstract class Hero {
         levelAttributes.addAttributes(new HeroAttributes(strength, dexterity, intelligence));
     }
 
-    public HeroAttributes getLevelAttributes(){
-        return this.levelAttributes;
-    }
 
-    //total attributes
     public HeroAttributes getAttributes(){
             HeroAttributes attribute = new HeroAttributes(levelAttributes.getStrength(),
                     levelAttributes.getDexterity(),levelAttributes.getIntelligence());
