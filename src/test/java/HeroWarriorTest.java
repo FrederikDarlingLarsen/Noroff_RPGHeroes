@@ -1,8 +1,8 @@
+import org.heroes.HeroAttributes;
+import org.heroes.HeroWarrior;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class HeroWarriorTest {
 
@@ -31,6 +31,6 @@ class HeroWarriorTest {
     @Test
     public void increaseLevel_attributesAreCorrectlyIncreased_shouldPass(){
         warrior.levelUp();
-        assertEquals(new HeroAttributes(8,4,2),warrior.getAttributes());
+        Assertions.assertEquals(new HeroAttributes(8,4,2),warrior.getAttributes());
     }
 }

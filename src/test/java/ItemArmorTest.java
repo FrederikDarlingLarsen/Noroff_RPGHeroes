@@ -1,8 +1,12 @@
 
+import org.heroes.HeroAttributes;
+import org.enums.ArmorType;
+import org.enums.Slot;
+import org.items.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
 class ItemArmorTest {
 

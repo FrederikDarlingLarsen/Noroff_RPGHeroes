@@ -17,7 +17,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Main",
+					"name": "org.Main",
 					"defaultDiagram": true,
 					"ownedViews": [
 						{
@@ -63,7 +63,7 @@
 											"top": 119,
 											"width": 363.822265625,
 											"height": 13,
-											"text": "Hero"
+											"text": "org.heroes.Hero"
 										},
 										{
 											"_type": "LabelView",
@@ -186,7 +186,7 @@
 											"top": 187,
 											"width": 363.822265625,
 											"height": 13,
-											"text": "-levelAttributes: HeroAttributes",
+											"text": "-levelAttributes: org.heroes.HeroAttributes",
 											"horizontalAlignment": 0
 										},
 										{
@@ -220,7 +220,7 @@
 											"top": 217,
 											"width": 363.822265625,
 											"height": 13,
-											"text": "-validWeaponTypes: ArrayList<WeaponType>",
+											"text": "-validWeaponTypes: ArrayList<enums.WeaponType>",
 											"horizontalAlignment": 0
 										},
 										{
@@ -237,7 +237,7 @@
 											"top": 232,
 											"width": 363.822265625,
 											"height": 13,
-											"text": "-validArmorTypes: ArrayList<ArmorType>",
+											"text": "-validArmorTypes: ArrayList<enums.ArmorType>",
 											"horizontalAlignment": 0
 										}
 									],
@@ -271,7 +271,7 @@
 											"top": 255,
 											"width": 363.822265625,
 											"height": 13,
-											"text": "+Hero()",
+											"text": "+org.heroes.Hero()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -322,7 +322,7 @@
 											"top": 300,
 											"width": 363.822265625,
 											"height": 13,
-											"text": "+GetAttributes(): HeroAttributes",
+											"text": "+GetAttributes(): org.heroes.HeroAttributes",
 											"horizontalAlignment": 0
 										},
 										{
@@ -339,7 +339,7 @@
 											"top": 315,
 											"width": 363.822265625,
 											"height": 13,
-											"text": "+AddValidWeaponType(weaponType: WeaponType): void",
+											"text": "+AddValidWeaponType(weaponType: enums.WeaponType): void",
 											"horizontalAlignment": 0
 										},
 										{
@@ -356,7 +356,7 @@
 											"top": 330,
 											"width": 363.822265625,
 											"height": 13,
-											"text": "+AddValidArmorTypes(armorType: ArmorType): void",
+											"text": "+AddValidArmorTypes(armorType: enums.ArmorType): void",
 											"horizontalAlignment": 0
 										},
 										{
@@ -373,7 +373,7 @@
 											"top": 345,
 											"width": 363.822265625,
 											"height": 13,
-											"text": "+GetWeapon(): ItemWeapon",
+											"text": "+GetWeapon(): items.ItemWeapon",
 											"horizontalAlignment": 0
 										},
 										{
@@ -390,7 +390,7 @@
 											"top": 360,
 											"width": 363.822265625,
 											"height": 13,
-											"text": "+EquipWeapon(weapon: ItemWeapon): void",
+											"text": "+EquipWeapon(weapon: items.ItemWeapon): void",
 											"horizontalAlignment": 0
 										},
 										{
@@ -407,7 +407,7 @@
 											"top": 375,
 											"width": 363.822265625,
 											"height": 13,
-											"text": "+EquipArmor(armor: ItemArmor)",
+											"text": "+EquipArmor(armor: items.ItemArmor)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -566,7 +566,7 @@
 											"top": 647,
 											"width": 167,
 											"height": 13,
-											"text": "Item"
+											"text": "items.Item"
 										},
 										{
 											"_type": "LabelView",
@@ -672,7 +672,7 @@
 											"top": 700,
 											"width": 167,
 											"height": 13,
-											"text": "-slot: Slot",
+											"text": "-slot: enums.Slot",
 											"horizontalAlignment": 0
 										}
 									],
@@ -740,7 +740,7 @@
 											"top": 753,
 											"width": 167,
 											"height": 13,
-											"text": "+GetSlot(): Slot",
+											"text": "+GetSlot(): enums.Slot",
 											"horizontalAlignment": 0
 										}
 									],
@@ -848,7 +848,7 @@
 											"top": 479,
 											"width": 367,
 											"height": 13,
-											"text": "HeroAttributes"
+											"text": "org.heroes.HeroAttributes"
 										},
 										{
 											"_type": "LabelView",
@@ -988,7 +988,7 @@
 											"top": 555,
 											"width": 367,
 											"height": 13,
-											"text": "+HeroAttributes(strength: int, desterity: int, intelligence: int)",
+											"text": "+org.heroes.HeroAttributes(strength: int, desterity: int, intelligence: int)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1215,7 +1215,7 @@
 											"top": 519,
 											"width": 191,
 											"height": 13,
-											"text": "HeroMage"
+											"text": "org.heroes.HeroMage"
 										},
 										{
 											"_type": "LabelView",
@@ -1340,7 +1340,7 @@
 											"top": 552,
 											"width": 191,
 											"height": 13,
-											"text": "+HeroMage(name: String)",
+											"text": "+org.heroes.HeroMage(name: String)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1612,7 +1612,7 @@
 											"top": 871,
 											"width": 247.03173828125,
 											"height": 13,
-											"text": "ItemWeapon"
+											"text": "items.ItemWeapon"
 										},
 										{
 											"_type": "LabelView",
@@ -1684,7 +1684,7 @@
 											"top": 894,
 											"width": 247.03173828125,
 											"height": 13,
-											"text": "-weaponType: WeaponType",
+											"text": "-weaponType: enums.WeaponType",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1735,7 +1735,7 @@
 											"top": 932,
 											"width": 247.03173828125,
 											"height": 13,
-											"text": "+ItemWeapon(weaponType: WeaponType)",
+											"text": "+items.ItemWeapon(weaponType: enums.WeaponType)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1752,7 +1752,7 @@
 											"top": 947,
 											"width": 247.03173828125,
 											"height": 13,
-											"text": "+GetWeaponType(): WeaponType",
+											"text": "+GetWeaponType(): enums.WeaponType",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2246,7 +2246,7 @@
 											"top": 519,
 											"width": 191,
 											"height": 13,
-											"text": "HeroRanger"
+											"text": "org.heroes.HeroRanger"
 										},
 										{
 											"_type": "LabelView",
@@ -2333,7 +2333,7 @@
 											"top": 552,
 											"width": 191,
 											"height": 13,
-											"text": "+HeroRanger(name: String)",
+											"text": "+org.heroes.HeroRanger(name: String)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2511,7 +2511,7 @@
 											"top": 519,
 											"width": 183,
 											"height": 13,
-											"text": "HeroRogue"
+											"text": "org.heroes.HeroRogue"
 										},
 										{
 											"_type": "LabelView",
@@ -2598,7 +2598,7 @@
 											"top": 552,
 											"width": 183,
 											"height": 13,
-											"text": "+HeroRogue(name: String)",
+											"text": "+org.heroes.HeroRogue(name: String)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -2776,7 +2776,7 @@
 											"top": 519,
 											"width": 183,
 											"height": 13,
-											"text": "HeroWarrior"
+											"text": "org.heroes.HeroWarrior"
 										},
 										{
 											"_type": "LabelView",
@@ -2863,7 +2863,7 @@
 											"top": 552,
 											"width": 183,
 											"height": 13,
-											"text": "+HeroWarrior(name: String)",
+											"text": "+org.heroes.HeroWarrior(name: String)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3323,7 +3323,7 @@
 											"top": 871,
 											"width": 223,
 											"height": 13,
-											"text": "ItemArmor"
+											"text": "items.ItemArmor"
 										},
 										{
 											"_type": "LabelView",
@@ -3395,7 +3395,7 @@
 											"top": 894,
 											"width": 223,
 											"height": 13,
-											"text": "-armorType: ArmorType",
+											"text": "-armorType: enums.ArmorType",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3446,7 +3446,7 @@
 											"top": 932,
 											"width": 223,
 											"height": 13,
-											"text": "+ItemArmor(armorType: ArmorType)",
+											"text": "+items.ItemArmor(armorType: enums.ArmorType)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3463,7 +3463,7 @@
 											"top": 947,
 											"width": 223,
 											"height": 13,
-											"text": "+GetArmorType(): ArmorType",
+											"text": "+GetArmorType(): enums.ArmorType",
 											"horizontalAlignment": 0
 										},
 										{
@@ -3683,7 +3683,7 @@
 											"top": 676,
 											"width": 86.72802734375,
 											"height": 13,
-											"text": "Slot"
+											"text": "enums.Slot"
 										},
 										{
 											"_type": "LabelView",
@@ -4226,7 +4226,7 @@
 											"top": 380,
 											"width": 86.72802734375,
 											"height": 13,
-											"text": "WeaponType"
+											"text": "enums.WeaponType"
 										},
 										{
 											"_type": "LabelView",
@@ -4546,7 +4546,7 @@
 											"top": 548,
 											"width": 86.72802734375,
 											"height": 13,
-											"text": "ArmorType"
+											"text": "enums.ArmorType"
 										},
 										{
 											"_type": "LabelView",
@@ -6421,7 +6421,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Hero",
+					"name": "org.heroes.Hero",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -6483,7 +6483,7 @@
 							},
 							"name": "validWeaponTypes",
 							"visibility": "private",
-							"type": "ArrayList<WeaponType>"
+							"type": "ArrayList<enums.WeaponType>"
 						},
 						{
 							"_type": "UMLAttribute",
@@ -6493,7 +6493,7 @@
 							},
 							"name": "validArmorTypes",
 							"visibility": "private",
-							"type": "ArrayList<ArmorType>"
+							"type": "ArrayList<enums.ArmorType>"
 						}
 					],
 					"operations": [
@@ -6503,7 +6503,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGGMHqE22TAZXY="
 							},
-							"name": "Hero"
+							"name": "org.heroes.Hero"
 						},
 						{
 							"_type": "UMLOperation",
@@ -6687,7 +6687,7 @@
 										"$ref": "AAAAAAGGMIgRFGbaLyI="
 									},
 									"name": "weapon",
-									"type": "ItemWeapon"
+									"type": "items.ItemWeapon"
 								},
 								{
 									"_type": "UMLParameter",
@@ -6715,7 +6715,7 @@
 										"$ref": "AAAAAAGGMIgbImbgERE="
 									},
 									"name": "armor",
-									"type": "ItemArmor"
+									"type": "items.ItemArmor"
 								}
 							]
 						},
@@ -6785,7 +6785,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "HeroMage"
+					"name": "org.heroes.HeroMage"
 				},
 				{
 					"_type": "UMLClass",
@@ -6793,7 +6793,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "HeroRanger"
+					"name": "org.heroes.HeroRanger"
 				},
 				{
 					"_type": "UMLClass",
@@ -6801,7 +6801,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "HeroRogue"
+					"name": "org.heroes.HeroRogue"
 				},
 				{
 					"_type": "UMLClass",
@@ -6809,7 +6809,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "HeroWarrior"
+					"name": "org.heroes.HeroWarrior"
 				},
 				{
 					"_type": "UMLClass",
@@ -6817,7 +6817,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Item",
+					"name": "items.Item",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -6921,7 +6921,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "HeroAttributes",
+					"name": "org.heroes.HeroAttributes",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -7048,7 +7048,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGGMH0LnmZbqmA="
 							},
-							"name": "HeroAttributes",
+							"name": "org.heroes.HeroAttributes",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -7247,7 +7247,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "HeroMage",
+					"name": "org.heroes.HeroMage",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -7290,7 +7290,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGGMIuNJmcIYdI="
 							},
-							"name": "HeroMage",
+							"name": "org.heroes.HeroMage",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -7387,7 +7387,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "ItemWeapon",
+					"name": "items.ItemWeapon",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -7434,7 +7434,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGGMJQmxGevulQ="
 							},
-							"name": "ItemWeapon",
+							"name": "items.ItemWeapon",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -7497,7 +7497,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "HeroRanger",
+					"name": "org.heroes.HeroRanger",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -7520,7 +7520,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGGMMezZ+zhkd0="
 							},
-							"name": "HeroRanger",
+							"name": "org.heroes.HeroRanger",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -7617,7 +7617,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "HeroRogue",
+					"name": "org.heroes.HeroRogue",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -7640,7 +7640,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGGMMfgV+38g7c="
 							},
-							"name": "HeroRogue",
+							"name": "org.heroes.HeroRogue",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -7737,7 +7737,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "HeroWarrior",
+					"name": "org.heroes.HeroWarrior",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -7760,7 +7760,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGGMMgCYe65fwM="
 							},
-							"name": "HeroWarrior",
+							"name": "org.heroes.HeroWarrior",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -7857,7 +7857,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "ItemArmor",
+					"name": "items.ItemArmor",
 					"ownedElements": [
 						{
 							"_type": "UMLGeneralization",
@@ -7904,7 +7904,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGGMMozQvZI1sU="
 							},
-							"name": "ItemArmor",
+							"name": "items.ItemArmor",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -7967,7 +7967,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Slot",
+					"name": "enums.Slot",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -8039,7 +8039,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "WeaponType",
+					"name": "enums.WeaponType",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -8163,7 +8163,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "ArmorType",
+					"name": "enums.ArmorType",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",

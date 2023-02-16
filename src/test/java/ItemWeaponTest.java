@@ -1,4 +1,7 @@
 
+import org.enums.Slot;
+import org.enums.WeaponType;
+import org.items.ItemWeapon;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

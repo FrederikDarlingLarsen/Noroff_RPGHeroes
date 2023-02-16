@@ -1,3 +1,10 @@
+import org.heroes.HeroAttributes;
+import org.heroes.HeroMage;
+import org.enums.ArmorType;
+import org.enums.Slot;
+import org.enums.WeaponType;
+import org.items.*;
+import org.items.ItemWeapon;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -89,7 +96,7 @@ class HeroMageTest {
 
     @Test
     public void totalAttributes_oneArmorPiece_shouldPass(){
-       ItemArmor cloth = new ItemArmor("just cloth",1,Slot.BODY,ArmorType.CLOTH,new HeroAttributes(1,1,1));
+       ItemArmor cloth = new ItemArmor("just cloth",1,Slot.BODY, ArmorType.CLOTH,new HeroAttributes(1,1,1));
        mage.equipArmor(cloth);
        assertEquals(new HeroAttributes(2,2,9), mage.getAttributes());
     }
@@ -111,7 +118,7 @@ class HeroMageTest {
 
     @Test
     public void heroDamage_withWeapon_shouldPass(){
-        ItemWeapon wand = new ItemWeapon("just a basic wand",1,WeaponType.WAND,3);
+        ItemWeapon wand = new ItemWeapon("just a basic wand",1, WeaponType.WAND,3);
         mage.equipWeapon(wand);
 
         double expected = 3 * (1 + mage.getAttributes().getIntelligence() / 100.0);
@@ -142,7 +149,7 @@ class HeroMageTest {
     @Test
     public void displayState_correctlyDisplay_shouldPass(){
 
-        StringBuilder expected = new StringBuilder("Details of Hero:" + "\n");
+        StringBuilder expected = new StringBuilder("Details of org.heroes.Hero:" + "\n");
         String name = "Name: Darling" + "\n";
         expected.append(name);
         String className = "Class: MAGE" + "\n";
