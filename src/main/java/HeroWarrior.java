@@ -1,6 +1,6 @@
 public class HeroWarrior extends Hero {
     public HeroWarrior(String _name){
-        super(_name, new HeroAttributes(5,2,1), "Warrior");
+        super(_name, new HeroAttributes(5,2,1), HeroClass.WARRIOR);
 
         addValidWeaponType(WeaponType.AXE);
         addValidWeaponType(WeaponType.HAMMER);
@@ -15,11 +15,5 @@ public class HeroWarrior extends Hero {
         this.addAttributes(3,2,1);
     }
 
-    public int damage() {
-        if(getWeapon() != null){
-            return getWeapon().getWeaponDamage() * (1 + getAttributes().getStrength() / 100);
-        }else{
-            return (1 + getAttributes().getIntelligence() / 100);
-        }
-    }
+
 }

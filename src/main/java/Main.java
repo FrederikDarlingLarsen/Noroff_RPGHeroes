@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -7,6 +10,19 @@ public class Main {
         String res = convertToPascalCase("The Quick .,- brown foX jUmped '[]/Over the lAZy dog");
 
         System.out.println(res);
+
+
+
+        System.out.println(translateWord("allo"));
+
+        System.out.println(translateWord("have"));
+        System.out.println(translateWord("cram"));
+
+        System.out.println(translateSentence("cram have alloi"));
+
+
+        //have ➞ avehay
+        //cram ➞ amcray
 
         //Testing functionality
 
@@ -84,6 +100,67 @@ public class Main {
             }
         }
         return result.toString();
+    }
+
+
+   /* KATA: English to Pig Latin Translator
+    Pig Latin has two very simple rules:
+    If a word starts with a consonant move the first letter(s) of the word, till you reach a vowel, to the end of the word and add "ay" to the end.
+            have ➞ avehay
+    cram ➞ amcray
+    take ➞ aketay
+    cat ➞ atcay
+    shrimp ➞ impshray
+    trebuchet ➞ ebuchettray
+    If a word starts with a vowel add "yay" to the end of the word.
+    ate ➞ ateyay
+    apple ➞ appleyay
+    oaken ➞ oakenyay
+    eagle ➞ eagleyay
+
+    Write two functions to make an English to pig Latin translator. The first function translateWord(word) takes a single word and returns that word translated into pig latin. The second function translateSentence(sentence) takes an English sentence and returns that sentence translated into pig Latin.
+    Examples
+    translateWord("flag") ➞ "agflay"
+    translateWord("Apple") ➞ "Appleyay"
+    translateWord("button") ➞ "uttonbay"
+    translateWord("") ➞ ""
+    translateSentence("I like to eat honey waffles.") ➞ "Iyay ikelay otay eatyay oneyhay afflesway."
+    translateSentence("Do you think it is going to rain today?") ➞ "Oday ouyay inkthay ityay isyay oinggay otay ainray odaytay?"
+    Notes
+    Regular expressions will help you not mess up the punctuation in the sentence.
+    Vowels are the English vowels: a e i o u
+    If the original word or sentence starts with a capital letter, the translation should preserve its case (see examples #2, #5 and #6).*/
+
+    public static String translateWord(String word){
+        //String result = "";
+        char[] letters = word.toCharArray();
+        List<Character> list = new ArrayList<>(
+                Arrays.asList('a', 'e', 'i', 'o','u','A', 'E', 'I', 'O','U'));
+
+            if(list.contains(word.charAt(0))){
+                return word + "yay";
+            }else{
+                String firstLetters = "";
+                int index = 0;
+                for (char letter : letters){
+                    if(list.contains(letter)){
+                        return word.substring(index)+firstLetters+"ay";
+                    }
+                    firstLetters += letter;
+                    index++;
+                }
+            }
+          return "";
+    }
+
+    static String translateSentence(String sentence){
+        String[] words = sentence.split(" ");
+        String result ="";
+
+        for(String word : words){
+            result += translateWord(word) + " ";
+        }
+        return result;
     }
 }
 

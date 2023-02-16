@@ -5,28 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e090d19-c701-4446-9328-edccbbcdff5b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/target/classes/ArmorType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ArmorType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HeroAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HeroAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HeroMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HeroMage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HeroRanger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HeroRanger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HeroRogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HeroRogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HeroWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HeroWarrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/HeroMageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HeroMageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MainTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Hero.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/HeroAttributes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HeroAttributes.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/HeroMage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HeroMage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/HeroRanger.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HeroRanger.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/HeroRogue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HeroRogue.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/HeroWarrior.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/HeroWarrior.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/InvalidArmorException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/InvalidArmorException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/InvalidWeaponException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/InvalidWeaponException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Item.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ItemArmor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ItemArmor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ItemWeapon.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ItemWeapon.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Slot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Slot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WeaponType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/WeaponType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/classpath.index" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classpath.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/HeroMageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroMageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/HeroRangerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroRangerTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/HeroRogueTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroRogueTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/HeroWarriorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroWarriorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ItemArmorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ItemArmorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ItemWeaponTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ItemWeaponTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MainTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MainTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -67,7 +66,8 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -82,6 +82,13 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.java in rpg-heroes">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="rpg-heroes" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HeroMageTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpg-heroes" />
       <option name="PACKAGE_NAME" value="" />
@@ -91,25 +98,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HeroRogueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpg-heroes" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="MAIN_CLASS_NAME" value="HeroRogueTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="java in JUnit5Examples" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JUnit5Examples" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java" />
+    <configuration name="HeroTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpg-heroes" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HeroTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -125,9 +127,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.java in rpg-heroes" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.HeroTest" />
+        <item itemvalue="JUnit.HeroRogueTest" />
         <item itemvalue="JUnit.HeroMageTest" />
-        <item itemvalue="JUnit.MainTest" />
-        <item itemvalue="JUnit.java in JUnit5Examples" />
       </list>
     </recent_temporary>
   </component>
@@ -143,7 +146,7 @@
     <servers />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Noroff_RPGHeroes$java_in_rpg_heroes.ic" NAME="java in rpg-heroes Coverage Results" MODIFIED="1676463081756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Noroff_RPGHeroes$java_in_rpg_heroes.ic" NAME="java in rpg-heroes Coverage Results" MODIFIED="1676550366936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Noroff_RPGHeroes$HeroMageTest.ic" NAME="HeroMageTest Coverage Results" MODIFIED="1676462594007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

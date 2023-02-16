@@ -105,7 +105,7 @@ class HeroMageTest {
 
     @Test
     public void heroDamage_noWeapon_shouldPass(){
-        int expected = (1 + mage.getAttributes().getIntelligence() / 100);
+        double expected = (1 + mage.getAttributes().getIntelligence() / 100.0);
         assertEquals(expected, mage.damage());
     }
 
@@ -114,7 +114,7 @@ class HeroMageTest {
         ItemWeapon wand = new ItemWeapon("just a basic wand",1,WeaponType.WAND,3);
         mage.equipWeapon(wand);
 
-        int expected = 3 * (1 + mage.getAttributes().getIntelligence() / 100);
+        double expected = 3 * (1 + mage.getAttributes().getIntelligence() / 100.0);
 
         assertEquals(expected,mage.damage());
     }
@@ -125,7 +125,7 @@ class HeroMageTest {
         mage.equipWeapon(wand);
         ItemWeapon staff = new ItemWeapon("a staff",1,WeaponType.STAFF,5);
         mage.equipWeapon(staff);
-        int expected = 5 * (1 + mage.getAttributes().getIntelligence() / 100);
+        double expected = 5 * (1 + mage.getAttributes().getIntelligence() / 100.0);
         assertEquals(expected, mage.damage());
     }
 
@@ -135,9 +135,7 @@ class HeroMageTest {
         mage.equipWeapon(wand);
         ItemArmor cloth = new ItemArmor("just cloth",1,Slot.BODY,ArmorType.CLOTH,new HeroAttributes(1,1,1));
         mage.equipArmor(cloth);
-
-        int expected = 3 * (1 + mage.getAttributes().getIntelligence() / 100);
-
+        double expected = 3 * (1 + mage.getAttributes().getIntelligence() / 100.0);
         assertEquals(expected, mage.damage());
     }
 
@@ -147,7 +145,7 @@ class HeroMageTest {
         StringBuilder expected = new StringBuilder("Details of Hero:" + "\n");
         String name = "Name: Darling" + "\n";
         expected.append(name);
-        String className = "Class: Mage" + "\n";
+        String className = "Class: MAGE" + "\n";
         expected.append(className);
         String level = "Level: 1" + "\n";
         expected.append(level);
@@ -155,9 +153,6 @@ class HeroMageTest {
         expected.append(attributes);
         String damage = "Damage: " + mage.damage();
         expected.append(damage);
-
         assertEquals(expected.toString(), mage.display().toString());
-
-
     }
 }

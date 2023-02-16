@@ -38,7 +38,10 @@ public class HeroAttributes {
     public void setIntelligence(int intelligence) {
         this.intelligence = intelligence;
     }
-
+    
+    @Override public String toString() {
+        return String.format("Strength: %d, Dexterity: %d, Intelligence: %d", strength, dexterity, intelligence);
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

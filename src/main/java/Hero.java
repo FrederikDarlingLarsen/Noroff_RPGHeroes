@@ -1,16 +1,23 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
+
+enum HeroClass {
+    MAGE,
+    RANGER,
+    ROGUE,
+    WARRIOR
+        }
 public abstract class Hero {
     private final String name;
-    private final String heroClass;
+    private final HeroClass heroClass;
     private int level = 1;
     private final HeroAttributes levelAttributes;
     private final HashMap<Slot, Item> equipment;
     private final ArrayList<WeaponType> validWeaponTypes;
     private final ArrayList<ArmorType> validArmorTypes;
 
-    public Hero (String _name, HeroAttributes _attributes, String _heroClass){
+    public Hero (String _name, HeroAttributes _attributes, HeroClass _heroClass){
         this.name = _name;
         this.levelAttributes = _attributes;
         this.heroClass = _heroClass;
@@ -28,6 +35,7 @@ public abstract class Hero {
     public void levelUp(){
         level++;
     }
+
     public String getName(){
         return this.name;
     }
@@ -39,7 +47,6 @@ public abstract class Hero {
     public void addAttributes(int strength, int dexterity, int intelligence){
         levelAttributes.addAttributes(new HeroAttributes(strength, dexterity, intelligence));
     }
-
 
     public HeroAttributes getAttributes(){
             HeroAttributes attribute = new HeroAttributes(levelAttributes.getStrength(),
@@ -78,8 +85,6 @@ public abstract class Hero {
 
         try {
             if (this.validWeaponTypes.contains(weapon.getWeaponType())) {
-
-
                 if(weapon.getRequiredLevel() <= this.level){
                     equipment.put(Slot.WEAPON, weapon);
                     System.out.println("You just equipped: " + weapon.getName());
@@ -119,45 +124,29 @@ public abstract class Hero {
         }
     }
 
-    public abstract int damage();
-
+    public double damage() {
+        if(getWeapon() != null){
+            return switch (this.heroClass) {
+                case MAGE -> getWeapon().getWeaponDamage() * (1 + getAttributes().getIntelligence() / 100.0);
+                case RANGER, ROGUE -> getWeapon().getWeaponDamage() * (1 + getAttributes().getDexterity() / 100.0);
+                case WARRIOR -> getWeapon().getWeaponDamage() * (1 + getAttributes().getStrength() / 100.0);
+            };
+        }else{
+            return switch (this.heroClass) {
+                case MAGE -> (1 + getAttributes().getIntelligence() / 100.0);
+                case RANGER, ROGUE -> (1 + getAttributes().getDexterity() / 100.0);
+                case WARRIOR -> (1 + getAttributes().getStrength() / 100.0);
+            };
+        }
+    }
 
     public StringBuilder display(){
-        // Get Name,Class,Level,the 3 attributes, damage,
-        //StringBuilder str = new StringBuilder();
-        //str.append("GFG");
-
-
-        /*String details =
-        "Name: " + this.name + "\n" +
-        "Class: " + this.heroClass + "\n" +
-        "Level: " + this.level + "\n" +
-        "Strength: " + this.levelAttributes.getStrength() + "\n" +
-        "Dexterity: " + this.levelAttributes.getDexterity() + "\n" +
-        "Intelligence: " + this.levelAttributes.getIntelligence() + "\n" +
-        "Damage: " + this.damage();
-        System.out.println(details);*/
-
-
         StringBuilder details = new StringBuilder("Details of Hero:" + "\n");
-
-        String name = "Name: " + this.name + "\n";
-        details.append(name);
-
-        String className = "Class: " + this.heroClass + "\n";
-        details.append(className);
-
-        String level = "Level: " + this.level + "\n";
-        details.append(level);
-
-        String attributes = "Strength: " + this.levelAttributes.getStrength() + ", " +
-                "Dexterity: " + this.levelAttributes.getDexterity() + ", " +
-                "Intelligence: " + this.levelAttributes.getIntelligence() + "\n";
-        details.append(attributes);
-
-        String damage = "Damage: " + this.damage();
-        details.append(damage);
-
+        details.append("Name: ").append(this.name).append("\n");
+        details.append("Class: ").append(this.heroClass).append("\n");
+        details.append("Level: ").append(this.level).append("\n");
+        details.append(this.levelAttributes).append("\n");
+        details.append("Damage: ").append(this.damage());
         return details;
     }
 }
