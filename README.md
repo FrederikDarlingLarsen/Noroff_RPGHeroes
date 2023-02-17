@@ -9,4 +9,5 @@ This application implements and tests the basic functionality of an RPG-style ga
 The test report can be viewed under the actions tab in the github repository. In git hub action, pick the lastest executes action and navigate to the "Test report session". Here the console output from the program can be viewed showcasing the number of sucessfully excuted tests
 
 ## Class diagram
-A class diagram for the application can be viewed by finding the classDiagram.pdf file. This details the initail design of the classes and their relationships.
+A class diagram for the application can be viewed below and is also found in the repository. This details the initail design of the classes and their relationships. Some parts of the classes changed slightly during development such as moving the damage() method to the abstract hero class.
+![class diagram](classDiagram.jpg)
