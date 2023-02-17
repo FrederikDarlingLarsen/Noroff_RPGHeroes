@@ -21,17 +21,17 @@ class HeroMageTest {
 
     @Test
     public void checkName_nameIsSameAsGiven_shouldPass(){
-        Assertions.assertEquals(mage.getName(),"Darling");
+        assertEquals(mage.getName(),"Darling");
     }
 
     @Test
     public void checkLevel_levelIsSameAsGiven_shouldPass(){
-        Assertions.assertEquals(mage.getLevel(),1);
+        assertEquals(mage.getLevel(),1);
     }
 
     @Test
    public void checkAttributes_attributesAreSameAsGiven_shouldPass(){
-       Assertions.assertEquals(new HeroAttributes(1,1,8), mage.getAttributes());
+       assertEquals(new HeroAttributes(1,1,8), mage.getAttributes());
    }
 
    @Test

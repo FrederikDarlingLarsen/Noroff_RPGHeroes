@@ -10,6 +10,7 @@ import org.items.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+// The abstract hero class which defines shared attributes and methods for all heroes.
 public abstract class Hero {
     private final String name;
     private final HeroClass heroClass;
@@ -56,10 +57,14 @@ public abstract class Hero {
     // Calculates and returns the total attributes by adding the level attributes with attributes
     // from all of the armor.
     public HeroAttributes getAttributes(){
+        // Gets the level attributes.
             HeroAttributes attribute = new HeroAttributes(levelAttributes.getStrength(),
                     levelAttributes.getDexterity(),levelAttributes.getIntelligence());
+            // Loops through all items.
       for (Slot slot : Slot.values()) {
+          // If check to avoid checking the weapon slot.
           if(!slot.equals(Slot.WEAPON)){
+              // If armor is equipped in the slot then get its attributes.
             if(getArmor(slot) != null) {
                 attribute.addAttributes(new HeroAttributes(
                         getArmor(slot).getArmorAttributes().getStrength(),
@@ -87,19 +92,24 @@ public abstract class Hero {
     }
 
     // Method for equipping weapons that use custom exceptions and exception handling for
-    //
+    // checking and handling when a user is trying to equip an invalid weapon.
     public void equipWeapon(ItemWeapon weapon)  {
 
         try {
+            // Checks if the weapon is of a valid type and then checks if the
+            // required level of the weapon is less than or equal to that of the hero.
             if (this.validWeaponTypes.contains(weapon.getWeaponType())) {
                 if(weapon.getRequiredLevel() <= this.level){
+                    // If both is true then equip the weapon.
                     equipment.put(Slot.WEAPON, weapon);
                     System.out.println("You just equipped: " + weapon.getName());
                 } else {
+                    // If level requirement is not met throw an exception with an appropriate message.
                     throw new InvalidWeaponException("You are not at a high enough level to equip this weapon: " + weapon.getName() +
                             "   of type: " + weapon.getWeaponType().name());
                 }
             } else {
+                // If type requirement is not met throw an exception with an appropriate message.
                 throw new InvalidWeaponException("The following weapon can not be equipped by your class: " + weapon.getName() +
                         "   of type: " + weapon.getWeaponType().name());
             }
@@ -109,19 +119,25 @@ public abstract class Hero {
         }
     }
 
+    // Method for equipping armor that use custom exceptions and exception handling for
+    // checking and handling when a user is trying to equip invalid armor.
     public void equipArmor(ItemArmor armor) {
 
         try {
+            // Checks if the piece of armor is of a valid type and then checks if the
+            // required level of piece of armor is less than or equal to that of the hero.
             if (this.validArmorTypes.contains(armor.getArmorType())) {
-
+                // If both is true then equip armor.
                 if(armor.getRequiredLevel() <= this.level) {
                     equipment.put(armor.getSlot(), armor);
                     System.out.println("You just equipped: " + armor.getName());
                 }else{
+                    // If level requirement is not met throw an exception with an appropriate message.
                     throw new InvalidArmorException("You can not equip this armor: " + armor.getName()  + "   of type: " +
                             armor.getArmorType().name());
                 }
             } else {
+                // If type requirement is not met throw an exception with an appropriate message.
                 throw new InvalidArmorException("You can not equip this armor: " + armor.getName()  + "   of type: " +
                         armor.getArmorType().name());
             }
@@ -131,14 +147,18 @@ public abstract class Hero {
         }
     }
 
+    // Method for calculating damage for the hero depending on their class
     public double damage() {
+        // Checks if the hero has a weapon equipped.
         if(getWeapon() != null){
+            // If true run a switch statement to check for the hero class and then calculate damage WITH weapon.
             return switch (this.heroClass) {
                 case MAGE -> getWeapon().getWeaponDamage() * (1 + getAttributes().getIntelligence() / 100.0);
                 case RANGER, ROGUE -> getWeapon().getWeaponDamage() * (1 + getAttributes().getDexterity() / 100.0);
                 case WARRIOR -> getWeapon().getWeaponDamage() * (1 + getAttributes().getStrength() / 100.0);
             };
         }else{
+            // If false run a switch statement to check for the hero class and then calculate damage WITHOUT weapon.
             return switch (this.heroClass) {
                 case MAGE -> (1 + getAttributes().getIntelligence() / 100.0);
                 case RANGER, ROGUE -> (1 + getAttributes().getDexterity() / 100.0);

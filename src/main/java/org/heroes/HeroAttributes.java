@@ -1,6 +1,6 @@
 package org.heroes;
 
-
+// The HeroAttributes class which is used to store attributes for the heroes and the armor.
 public class HeroAttributes {
     private int strength ;
     private int dexterity;
@@ -12,6 +12,7 @@ public class HeroAttributes {
         this.intelligence = _intelligence;
     }
 
+    // Used to add attributes to the object by giving the method an object.
     public void addAttributes (HeroAttributes newAttributes){
         setStrength(this.strength + newAttributes.getStrength());
         setDexterity(this.dexterity + newAttributes.getDexterity());
@@ -42,9 +43,11 @@ public class HeroAttributes {
         this.intelligence = intelligence;
     }
 
+    // Overridden toString() method used to simplify the display() method of the hero.
     @Override public String toString() {
         return String.format("Strength: %d, Dexterity: %d, Intelligence: %d", strength, dexterity, intelligence);
     }
+    // Overridden equals() method used for unit testing to compare two different objects and check for equal values.
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

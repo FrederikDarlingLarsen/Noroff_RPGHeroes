@@ -17,12 +17,12 @@ class HeroRangerTest {
 
     @Test
     public void checkName_nameIsSameAsGiven_shouldPass(){
-        Assertions.assertEquals(ranger.getName(),"Kristian");
+        assertEquals(ranger.getName(),"Kristian");
     }
 
     @Test
     public void checkLevel_levelIsSameAsGiven_shouldPass(){
-        Assertions.assertEquals(ranger.getLevel(),1);
+        assertEquals(ranger.getLevel(),1);
     }
 
     @Test
