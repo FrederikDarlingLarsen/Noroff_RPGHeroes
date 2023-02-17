@@ -17,22 +17,22 @@ class HeroRogueTest {
 
     @Test
     public void checkName_nameIsSameAsGiven_shouldPass(){
-        assertEquals(rogue.getName(),"Darling");
+        Assertions.assertEquals(rogue.getName(),"Darling");
     }
 
     @Test
     public void checkLevel_levelIsSameAsGiven_shouldPass(){
-        assertEquals(rogue.getLevel(),1);
+        Assertions.assertEquals(rogue.getLevel(),1);
     }
 
     @Test
     public void checkAttributes_attributesAreSameAsGiven_shouldPass(){
-        assertEquals(new HeroAttributes(2,6,1), rogue.getAttributes());
+        Assertions.assertEquals(new HeroAttributes(2,6,1), rogue.getAttributes());
     }
 
     @Test
     public void increaseLevel_attributesAreCorrectlyIncreased_shouldPass(){
         rogue.levelUp();
-        assertEquals(new HeroAttributes(3,10,2),rogue.getAttributes());
+        Assertions.assertEquals(new HeroAttributes(3,10,2),rogue.getAttributes());
     }
 }

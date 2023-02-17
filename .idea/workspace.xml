@@ -6,13 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="6e090d19-c701-4446-9328-edccbbcdff5b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/heroes/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/heroes/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/heroes/HeroAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/heroes/HeroAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classDiagram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/classDiagram.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/HeroMageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HeroMageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/HeroRangerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HeroRangerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/HeroRogueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HeroRogueTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/HeroWarriorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HeroWarriorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ItemArmorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ItemArmorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ItemWeaponTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ItemWeaponTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/HeroMageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroMageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/HeroRangerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroRangerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/HeroWarriorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroWarriorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ItemArmorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ItemArmorTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +149,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Noroff_RPGHeroes$java_in_rpg_heroes.ic" NAME="java in rpg-heroes Coverage Results" MODIFIED="1676635947104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Noroff_RPGHeroes$java_in_rpg_heroes.ic" NAME="java in rpg-heroes Coverage Results" MODIFIED="1676660606364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Noroff_RPGHeroes$HeroMageTest.ic" NAME="HeroMageTest Coverage Results" MODIFIED="1676462594007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

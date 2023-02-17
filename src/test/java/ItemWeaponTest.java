@@ -19,17 +19,17 @@ class ItemWeaponTest {
 
     @Test
     public void checkName_nameIsSameAsGiven_shouldPass(){
-        assertEquals(axe.getName(),"Killer axe");
+        Assertions.assertEquals(axe.getName(),"Killer axe");
     }
 
     @Test
     public void checkLevelReq_levelIsSameAsGiven_shouldPass(){
-        assertEquals(axe.getRequiredLevel(),1);
+        Assertions.assertEquals(axe.getRequiredLevel(),1);
     }
 
     @Test
     public void checkType_typeIsSameAsGiven_shouldPass(){
-        assertEquals(axe.getWeaponType(),WeaponType.AXE);
+        Assertions.assertEquals(axe.getWeaponType(),WeaponType.AXE);
     }
 
     @Test
@@ -39,6 +39,6 @@ class ItemWeaponTest {
 
     @Test
     public void checkDamage_damageIsSameAsGiven_shouldPass(){
-        assertEquals(axe.getWeaponDamage(),5);
+        Assertions.assertEquals(axe.getWeaponDamage(),5);
     }
 }

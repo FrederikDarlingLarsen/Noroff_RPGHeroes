@@ -17,12 +17,12 @@ class HeroRangerTest {
 
     @Test
     public void checkName_nameIsSameAsGiven_shouldPass(){
-        assertEquals(ranger.getName(),"Kristian");
+        Assertions.assertEquals(ranger.getName(),"Kristian");
     }
 
     @Test
     public void checkLevel_levelIsSameAsGiven_shouldPass(){
-        assertEquals(ranger.getLevel(),1);
+        Assertions.assertEquals(ranger.getLevel(),1);
     }
 
     @Test
@@ -33,7 +33,7 @@ class HeroRangerTest {
     @Test
     public void increaseLevel_attributesAreCorrectlyIncreased_shouldPass(){
         ranger.levelUp();
-        assertEquals(new HeroAttributes(2,12,2),ranger.getAttributes());
+        Assertions.assertEquals(new HeroAttributes(2,12,2),ranger.getAttributes());
     }
 
 }
