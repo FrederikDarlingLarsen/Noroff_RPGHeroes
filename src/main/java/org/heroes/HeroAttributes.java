@@ -1,5 +1,6 @@
 package org.heroes;
 
+
 public class HeroAttributes {
     private int strength ;
     private int dexterity;

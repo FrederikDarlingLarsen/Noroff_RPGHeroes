@@ -149,7 +149,7 @@ class HeroMageTest {
     @Test
     public void displayState_correctlyDisplay_shouldPass(){
 
-        StringBuilder expected = new StringBuilder("Details of org.heroes.Hero:" + "\n");
+        StringBuilder expected = new StringBuilder("Details of hero:" + "\n");
         String name = "Name: Darling" + "\n";
         expected.append(name);
         String className = "Class: MAGE" + "\n";

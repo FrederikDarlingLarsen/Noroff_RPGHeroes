@@ -2,6 +2,7 @@ package org.items;
 
 import org.enums.Slot;
 
+// Abstract class for the items that a hero can equip.
 public abstract class Item {
     private final String name;
     private final int requiredLevel;

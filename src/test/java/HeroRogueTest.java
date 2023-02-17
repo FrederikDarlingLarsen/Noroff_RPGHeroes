@@ -33,6 +33,6 @@ class HeroRogueTest {
     @Test
     public void increaseLevel_attributesAreCorrectlyIncreased_shouldPass(){
         rogue.levelUp();
-        assertEquals(new HeroAttributes(3,10,2),rogue.getAttributes());
+        Assertions.assertEquals(new HeroAttributes(3,10,2),rogue.getAttributes());
     }
 }

@@ -5,11 +5,9 @@ import org.enums.Slot;
 import org.items.Item;
 import org.heroes.HeroAttributes;
 
-
+// A class for creating the armor that a hero can equip
 public class ItemArmor extends Item{
-
     private final ArmorType armorType;
-
     private final HeroAttributes armorAttributes;
 
     public ItemArmor(String _name, int _reqLevel, Slot _slot, ArmorType _armorType, HeroAttributes _armorAttributes){

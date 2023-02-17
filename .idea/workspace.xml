@@ -5,59 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e090d19-c701-4446-9328-edccbbcdff5b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/enums/ArmorType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/enums/HeroClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/enums/Slot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/enums/WeaponType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/heroes/HeroMage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/heroes/HeroRanger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/heroes/HeroRogue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/heroes/HeroWarrior.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Class Diagram.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Class Diagram.mdj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/heroes/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HeroAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/heroes/HeroAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HeroMage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HeroRanger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HeroRogue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HeroWarrior.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InvalidArmorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exceptions/InvalidArmorException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/InvalidWeaponException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exceptions/InvalidWeaponException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/items/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ItemArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/items/ItemArmor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ItemWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/items/ItemWeapon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Class Diagram.mdj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/enums/ArmorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enums/ArmorType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/enums/HeroClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enums/HeroClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/enums/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enums/Slot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/enums/WeaponType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/enums/WeaponType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exceptions/InvalidArmorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exceptions/InvalidArmorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exceptions/InvalidWeaponException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exceptions/InvalidWeaponException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/heroes/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/heroes/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/heroes/HeroAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/heroes/HeroAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/heroes/HeroMage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/heroes/HeroMage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/heroes/HeroRanger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/heroes/HeroRanger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/heroes/HeroRogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/heroes/HeroRogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/heroes/HeroWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/heroes/HeroWarrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/items/ItemArmor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/items/ItemArmor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/items/ItemWeapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/items/ItemWeapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/HeroMageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HeroMageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HeroRangerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HeroRangerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/HeroRogueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HeroRogueTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HeroWarriorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HeroWarriorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ItemArmorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ItemArmorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ItemWeaponTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ItemWeaponTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ArmorType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Hero$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Hero.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HeroAttributes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HeroClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HeroMage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HeroRanger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HeroRogue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HeroWarrior.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/InvalidArmorException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/InvalidWeaponException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ItemArmor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ItemWeapon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Slot.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/WeaponType.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/classpath.index" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classpath.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Main.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/HeroMageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroMageTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/HeroRangerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroRangerTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/HeroRogueTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroRogueTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/HeroWarriorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/HeroWarriorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ItemArmorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ItemArmorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ItemWeaponTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ItemWeaponTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/classpath.index" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/classpath.index" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,20 +61,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_directory_selection": "C:/Users/frede/Documents/GitHub/Noroff_RPGHeroes/src/main/java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/frede/Documents/GitHub/Noroff_RPGHeroes/src/main/java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -180,7 +151,7 @@
     <servers />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Noroff_RPGHeroes$java_in_rpg_heroes.ic" NAME="java in rpg-heroes Coverage Results" MODIFIED="1676556444335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Noroff_RPGHeroes$java_in_rpg_heroes.ic" NAME="java in rpg-heroes Coverage Results" MODIFIED="1676635947104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Noroff_RPGHeroes$HeroMageTest.ic" NAME="HeroMageTest Coverage Results" MODIFIED="1676462594007" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

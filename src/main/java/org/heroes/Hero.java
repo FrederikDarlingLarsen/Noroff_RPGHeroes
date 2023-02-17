@@ -19,17 +19,20 @@ public abstract class Hero {
     private final ArrayList<WeaponType> validWeaponTypes;
     private final ArrayList<ArmorType> validArmorTypes;
 
+    //The constructor for the hero which assigns name, attributes and class to the hero.
     public Hero (String _name, HeroAttributes _attributes, HeroClass _heroClass){
         this.name = _name;
         this.levelAttributes = _attributes;
         this.heroClass = _heroClass;
 
+        //Equipment is initialized and given four empty slots.
         equipment = new HashMap<>();
         equipment.put(Slot.WEAPON, null);
         equipment.put(Slot.HEAD, null);
         equipment.put(Slot.BODY, null);
         equipment.put(Slot.LEGS, null);
 
+        //The arraylists for the valid weapon and armor types are initialized.
         validWeaponTypes = new ArrayList<WeaponType>();
         validArmorTypes = new ArrayList<ArmorType>();
     }
@@ -50,12 +53,12 @@ public abstract class Hero {
         levelAttributes.addAttributes(new HeroAttributes(strength, dexterity, intelligence));
     }
 
+    // Calculates and returns the total attributes by adding the level attributes with attributes
+    // from all of the armor.
     public HeroAttributes getAttributes(){
             HeroAttributes attribute = new HeroAttributes(levelAttributes.getStrength(),
                     levelAttributes.getDexterity(),levelAttributes.getIntelligence());
-
       for (Slot slot : Slot.values()) {
-
           if(!slot.equals(Slot.WEAPON)){
             if(getArmor(slot) != null) {
                 attribute.addAttributes(new HeroAttributes(
@@ -83,6 +86,8 @@ public abstract class Hero {
         return (ItemArmor) equipment.get(slot);
     }
 
+    // Method for equipping weapons that use custom exceptions and exception handling for
+    //
     public void equipWeapon(ItemWeapon weapon)  {
 
         try {
@@ -142,8 +147,11 @@ public abstract class Hero {
         }
     }
 
+
+    // Method for displaying a hero using a StringBuilder. When using a StringBuilder
+    // each element can be added using the append() method.
     public StringBuilder display(){
-        StringBuilder details = new StringBuilder("Details of org.heroes.Hero:" + "\n");
+        StringBuilder details = new StringBuilder("Details of hero:" + "\n");
         details.append("Name: ").append(this.name).append("\n");
         details.append("Class: ").append(this.heroClass).append("\n");
         details.append("Level: ").append(this.level).append("\n");

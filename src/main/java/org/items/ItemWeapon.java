@@ -3,6 +3,7 @@ package org.items;
 import org.enums.Slot;
 import org.enums.WeaponType;
 
+// A class for creating the weapons that heroes can equip.
 public class ItemWeapon extends Item {
     private final WeaponType weaponType;
     private final int weaponDamage;
